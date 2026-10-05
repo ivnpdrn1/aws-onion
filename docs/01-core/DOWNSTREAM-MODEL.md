@@ -120,3 +120,61 @@ CloudWatch is a **transversal observability layer**, not another packet-routing 
 > **WHO? → WHICH SERVICE? → HOW DOES IT GET THERE? → CAN IT REACH? → WHO EXECUTES? → CAN IT DO IT? → WHAT HAPPENED?**
 
 This downstream convention is the default numbering model for future AWS-Onion diagrams.
+
+
+## Complementary direction — Upstream feedback
+
+The canonical numbering remains **downstream** because #1 is the initiator of the modeled action. However, AWS-Onion also recognizes the complementary return path produced by the architecture.
+
+~~~text
+DOWNSTREAM — intent / action
+USER / PRINCIPAL
+      ↓
+CONTROL / MANAGEMENT
+      ↓
+SERVICE / ACCESS PATH
+      ↓
+NETWORK / AUTHORIZATION
+      ↓
+RESOURCE / EXECUTION
+
+UPSTREAM — result / evidence
+RESOURCE / INFRASTRUCTURE
+      ↑
+STATUS / METRICS / EVENTS
+      ↑
+OBSERVABILITY
+      ↑
+ADMINISTRATOR / AUTOMATION
+~~~
+
+Mental rule:
+
+> **↓ Downstream = intent, configuration, requests and actions.**  
+> **↑ Upstream = status, metrics, events, errors and operational evidence.**
+
+These directions are conceptual causal flows, not a claim that every AWS service is a physical hop in both directions.
+
+### Why EC2 lifecycle makes this visible
+
+An EC2 lifecycle operation starts with an administrator or automation and travels downstream as a requested state change such as Start, Stop, Reboot, Hibernate or Terminate. The effects can reach several independent layers: compute state, guest OS/RAM, EBS persistence, network addressing and the underlying host.
+
+Operational evidence then returns upstream through status checks, metrics, events and observability. This creates a closed AWS-Onion reasoning loop:
+
+~~~text
+INTENT
+  ↓
+CONTROL
+  ↓
+EXECUTION
+  ↓
+INFRASTRUCTURE EFFECT
+  ↑
+TELEMETRY / STATUS
+  ↑
+OBSERVATION
+  ↑
+NEXT DECISION
+~~~
+
+See: [EC2 Instance Lifecycle through AWS-Onion](../02-compute-networking/ec2-instance-lifecycle.md).
