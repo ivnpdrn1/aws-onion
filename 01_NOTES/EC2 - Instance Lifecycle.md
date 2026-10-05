@@ -1,145 +1,129 @@
 ---
 type: concept
 domain: compute
-tags: [aws, ec2, lifecycle, ebs, networking, cloudwatch, aws-onion]
+tags: [aws, ec2, lifecycle, ebs, networking, cloudwatch, aws-onion, tables]
 ---
 
 # EC2 — Instance Lifecycle
 
-## 1. State map
+> [!abstract] Study method
+> Review in sequence: **State → Transition → Persistence → Cost → Infrastructure → AWS-Onion layer**.
 
-~~~text
-AMI
- ↓
-PENDING
- ↓
-RUNNING
- ├─ Reboot ─────────→ REBOOTING ─→ RUNNING
- ├─ Stop ───────────→ STOPPING ───→ STOPPED ─→ Start → PENDING → RUNNING
- ├─ Hibernate ──────→ STOPPING ───→ STOPPED ─→ Resume
- └─ Terminate ──────→ SHUTTING-DOWN → TERMINATED
-~~~
+## 1 — State / action / condition
 
-> **Terminated = cannot be recovered.**
+| Concept | Type | Essential meaning |
+|---|---|---|
+| Pending | State | Preparing instance |
+| Running | State | Instance active |
+| Rebooting | Transition | OS reboot in progress |
+| Stopping | State | Transition toward Stopped |
+| Stopped | State | Compute stopped; can Start again |
+| Shutting-down | State | Termination in progress |
+| Terminated | State | Deleted; cannot recover |
+| Stop | Action | Stop EBS-backed compute temporarily |
+| Hibernate | Action | Stop while preserving RAM in EBS |
+| Reboot | Action | Restart guest OS |
+| Terminate | Action | Delete instance |
+| Retire | Infrastructure condition | AWS hardware failure leads to scheduled stop/terminate |
+| Recover | Corrective action | Recover from underlying hardware/platform impairment |
 
-## 2. STOP
+## 2 — Transition table
 
-- EBS-backed instances only.
-- EC2 compute charge stops.
-- EBS remains attached and chargeable.
-- RAM is lost.
-- Private IPv4 + IPv6 retained.
-- Dynamic public IPv4 released.
-- Elastic IP retained.
-- Start can place the instance on a different host.
+| From | Action | Through | To |
+|---|---|---|---|
+| AMI | Launch | Pending | Running |
+| Running | Reboot | Rebooting | Running |
+| Running | Stop | Stopping | Stopped |
+| Stopped | Start | Pending | Running |
+| Running | Hibernate | Stopping | Stopped / resumable |
+| Running | Terminate | Shutting-down | Terminated |
 
-> **STOP exposes abstraction: logical EC2 ≠ permanent physical host.**
+## 3 — Resource persistence
 
-## 3. HIBERNATE
-
-- Supported AMIs only.
-- Must be enabled at launch.
-- RAM is saved to EBS.
-- On resume:
-  - root EBS state restored,
-  - RAM reloaded,
-  - processes resume,
-  - data volumes reattached,
-  - instance ID retained.
-
-~~~text
-RAM → EBS → RAM
-          ↓
-     processes resume
-~~~
-
-> **Hibernate = Storage preserves volatile Compute state.**
-
-## 4. REBOOT
-
-- Equivalent to OS reboot.
-- DNS retained.
-- IPv4 and IPv6 retained.
-- Billing unaffected.
-
-> **Reboot mainly affects OS/runtime, not the surrounding EC2 identity.**
-
-## 5. RETIRE
-
-- AWS detects irreparable underlying hardware failure.
-- At scheduled retirement, AWS stops or terminates the instance.
-
-> **Retirement = Physical layer problem, not necessarily an EC2/OS problem.**
-
-## 6. TERMINATE
-
-- Deletes the EC2 instance.
-- Cannot recover a terminated instance.
-- Root EBS deleted by default.
-
-~~~text
-STOP      → can return
-TERMINATE → cannot return
-~~~
-
-## 7. RECOVER
-
-- CloudWatch can monitor system status.
-- Applies to underlying hardware/platform impairment.
-- Recovered instance is intended to be identical to the original.
-
-~~~text
-HARDWARE / PLATFORM
-       ↑
-SYSTEM STATUS
-       ↑
-CLOUDWATCH
-       ↑
-ADMIN / AUTOMATION
-       ↓
-RECOVERY
-       ↓
-EC2
-~~~
-
-## 8. One-table memory view
-
-| Operation | RAM | EBS | Network | Host | Return? |
+| Operation | RAM | EBS | Private IPv4 / IPv6 | Public IPv4 | Elastic IP |
 |---|---|---|---|---|---|
-| Reboot | Restarted | Retained | Addresses retained | Same running environment | Yes |
-| Stop / Start | Lost | Retained | Private IPv4/IPv6 retained; public IPv4 released; EIP retained | Can change | Yes |
-| Hibernate | Saved/restored | Retained | Identity retained | Runtime reconstructed | Yes |
-| Retire | Depends on stop/terminate | Depends | Depends | Underlying hardware failed | Depends |
-| Terminate | Lost | Root deleted by default | Released with instance | Ends | No |
-| Recover | Recovered by EC2 mechanism | Preserved | Identity preserved | Hardware/platform issue bypassed | Yes |
+| Reboot | OS reboot | No deletion described | Retained | Retained | Not separately discussed |
+| Stop / Start | **Lost** | **Retained + chargeable** | **Retained** | **Released** | **Retained** |
+| Hibernate | **Saved to EBS / restored** | Root restored; data volumes reattached | Not specified in lesson | Not specified | Not specified |
+| Terminate | Instance deleted | **Root deleted by default** | Not specified | Not specified | Not specified |
 
-## 9. AWS-Onion mental model
+## 4 — Reboot vs Stop vs Hibernate vs Terminate
 
-~~~text
-#1 ADMIN / AUTOMATION
-        ↓
-#2 EC2 CONTROL
-        ↓
-#3 COMPUTE STATE
-        ↓
-#4 OS / RAM
-        ↓
-#5 EBS
-        ↓
-#6 ENI / IP
-        ↓
-#7 PHYSICAL HOST
-        ↑
-#8 STATUS / CLOUDWATCH
-        ↑
-   ADMIN / AUTOMATION
-~~~
+| Question | Reboot | Stop | Hibernate | Terminate |
+|---|---|---|---|---|
+| Purpose | Restart OS | Pause compute | Preserve RAM and pause | Delete instance |
+| Return? | Yes | Yes | Yes | **No** |
+| RAM | OS reboot | **Lost** | **Saved/restored** | Ends with instance |
+| EBS | Remains | **Remains** | **Remains** | **Root deleted by default** |
+| Billing | **Unaffected** | No EC2 charge while stopped | Compute stopped | Ends |
+| Key phrase | Restart | Pause | Preserve memory | Delete |
 
-## Memory anchors
+## 5 — STOP deep comparison
+
+| Layer | Behavior |
+|---|---|
+| Compute | Stops; can Start again |
+| RAM | **Lost** |
+| EBS | **Retained; chargeable** |
+| Private IPv4 | **Retained** |
+| IPv6 | **Retained** |
+| Dynamic public IPv4 | **Released** |
+| Elastic IP | **Retained** |
+| Physical host | **Can change after Start** |
+
+> [!tip]
+> **Compute lifecycle ≠ Storage lifecycle ≠ Network-address lifecycle ≠ Physical-host identity.**
+
+## 6 — HIBERNATE deep comparison
+
+| Item | Behavior |
+|---|---|
+| Supported AMI | Required |
+| Enabled at launch | Required |
+| RAM | Saved to EBS |
+| Root EBS | Restored |
+| RAM after Start | Reloaded |
+| Processes | Resume |
+| Data volumes | Reattached |
+| Instance ID | Retained |
+
+> **Hibernate = RAM → EBS → RAM → processes resume.**
+
+## 7 — RETIRE vs RECOVER
+
+| | Retire | Recover |
+|---|---|---|
+| Cause | Irreparable underlying hardware failure | Underlying hardware/platform impairment |
+| Layer | Physical/platform | Physical/platform |
+| AWS behavior | Scheduled Stop or Terminate | Recovery |
+| CloudWatch/system status | Not the main retirement point | **Can be monitored** |
+| Result | Depends on stop/terminate | Instance described as identical to original |
+
+## 8 — Exam matrix
+
+| Concept | One-line memory |
+|---|---|
+| Reboot | **OS reboot; addresses retained; billing continues** |
+| Stop | **RAM lost; EBS stays; private IPs stay; public IPv4 goes** |
+| Hibernate | **RAM saved to EBS; processes resume** |
+| Retire | **Underlying host hardware failure** |
+| Terminate | **Delete; cannot recover; root EBS deleted by default** |
+| Recover | **Hardware/platform issue + system status + CloudWatch** |
+
+## 9 — AWS-Onion layer map
+
+| # | Layer | Lifecycle question |
+|---:|---|---|
+| 1 | User / Admin / Automation | Who initiated the action? |
+| 2 | AWS Control / Management | Which EC2 action was requested? |
+| 3 | Compute | What EC2 state changed? |
+| 4 | OS / RAM | What happened to runtime state? |
+| 5 | EBS | What persisted in storage? |
+| 6 | Network identity | Which addresses persisted or changed? |
+| 7 | Physical / platform | Did the underlying host matter? |
+| 8 | Status / CloudWatch | What evidence came back? |
 
 > **↓ Actions descend. ↑ Evidence returns.**
-
-> **Compute lifecycle ≠ Storage lifecycle ≠ Network-address lifecycle ≠ Physical-host identity.**
 
 > **STOP preserves the logical machine. TERMINATE ends it.**
 
