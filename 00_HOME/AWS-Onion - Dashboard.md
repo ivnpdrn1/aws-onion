@@ -52,6 +52,7 @@ APPLICATION
 
 ### Networking & Compute
 - [[EC2 - Networking and Connectivity]]
+- [[EC2 - Instance Lifecycle]]
 
 ### IAM
 - [[IAM - Groups Roles and STS]]
@@ -70,7 +71,9 @@ APPLICATION
 > **ENI connects. ENA accelerates. EFA coordinates clusters.**  
 > **GROUP = same identity + permissions through membership.**  
 > **ROLE = temporary Role session + temporary credentials.**  
-> **Agent communicates. Role authorizes. Network provides the path. SSM manages.**
+> **Agent communicates. Role authorizes. Network provides the path. SSM manages.**  
+> **↓ Actions descend. ↑ Evidence returns.**  
+> **Compute lifecycle ≠ Storage lifecycle ≠ Network-address lifecycle ≠ Physical-host identity.**
 
 ## Method for every new AWS concept
 
