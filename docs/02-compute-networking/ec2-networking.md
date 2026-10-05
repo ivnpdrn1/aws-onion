@@ -149,3 +149,28 @@ EC2             = THE machine
 ```
 
 This is AWS-Onion in practice: launching “one EC2” actually connects several architectural layers.
+
+
+## EC2 lifecycle as a layer test
+
+The EC2 lifecycle makes the separation between AWS layers visible:
+
+~~~text
+EC2 state
+   ↓
+OS / RAM
+   ↓
+EBS persistence
+   ↓
+ENI / addressing
+   ↓
+underlying host
+~~~
+
+A Stop/Start operation can preserve EBS and private addressing while releasing ordinary public IPv4 and allowing the logical instance to start on a different physical host.
+
+Mental rule:
+
+> **Compute lifecycle ≠ Storage lifecycle ≠ Network-address lifecycle ≠ Physical-host identity.**
+
+See [EC2 Instance Lifecycle through AWS-Onion](ec2-instance-lifecycle.md).
