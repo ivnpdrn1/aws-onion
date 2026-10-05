@@ -53,6 +53,7 @@ See [Certification Roadmap](docs/00-roadmap/certification-roadmap.md).
 
 - [Core AWS-Onion Mental Model](docs/01-core/aws-onion-core.md)
 - [EC2 Networking & Connectivity](docs/02-compute-networking/ec2-networking.md)
+- [EC2 Instance Lifecycle](docs/02-compute-networking/ec2-instance-lifecycle.md)
 - [IAM Groups, Roles & STS](docs/03-iam/roles-groups-sts.md)
 - [Systems Manager](docs/04-operations/systems-manager.md)
 - [CloudWatch](docs/04-operations/cloudwatch.md)
@@ -62,6 +63,11 @@ See [Certification Roadmap](docs/00-roadmap/certification-roadmap.md).
 ## Memory phrases
 
 ```text
+Actions / configuration descend.
+Status / metrics / errors / evidence return upward.
+
+Compute lifecycle ≠ Storage lifecycle ≠ Network-address lifecycle ≠ Physical-host identity.
+
 Route ≠ Address ≠ Permission
 
 NACL protects the subnet.
