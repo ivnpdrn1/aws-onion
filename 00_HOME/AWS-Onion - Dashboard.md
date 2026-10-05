@@ -1,0 +1,93 @@
+---
+type: dashboard
+project: AWS-Onion
+status: active
+updated: 2026-10-05
+tags: [aws-onion, aws, certification, architecture, developer, ai]
+---
+
+# AWS-Onion — Dashboard
+
+> [!abstract] Purpose
+> Build a durable AWS mental model through **relationships between layers**, prepare for AWS certifications, and evolve the learning system into a future book.
+
+## Current thesis
+
+> **Do not memorize AWS as isolated services. Understand what each layer depends on, what it controls, and what it provides to the next layer.**
+
+## Certification paths
+
+| Track | Current purpose |
+|---|---|
+| Solutions Architect | Architecture, networking, compute, storage, security, resilience |
+| Developer | Application services, APIs, events, serverless, IAM, deployment |
+| AI | Bedrock, AI services, agents, data, security, responsible AI |
+
+## Core Onion
+
+```text
+ORIGIN
+  ↓
+GATEWAY
+  ↓
+PATH / ROUTING
+  ↓
+SUBNET CONTROL
+  ↓
+RESOURCE CONTROL
+  ↓
+NETWORK INTERFACE
+  ↓
+COMPUTE
+  ↓
+APPLICATION
+```
+
+## Navigation
+
+### Core
+- [[AWS-Onion - Mental Model]]
+- [[AWS-Onion - Exam Map]]
+- [[AWS-Onion - Glossary]]
+
+### Networking & Compute
+- [[EC2 - Networking and Connectivity]]
+
+### IAM
+- [[IAM - Groups Roles and STS]]
+
+### Operations
+- [[Systems Manager - Mental Model]]
+- [[CloudWatch - Mental Model]]
+
+### Book
+- [[AWS-Onion - Book Vision]]
+
+## Current memory anchors
+
+> [!tip] Exam anchors
+> **Route ≠ Address ≠ Permission**  
+> **ENI connects. ENA accelerates. EFA coordinates clusters.**  
+> **GROUP = same identity + permissions through membership.**  
+> **ROLE = temporary Role session + temporary credentials.**  
+> **Agent communicates. Role authorizes. Network provides the path. SSM manages.**
+
+## Method for every new AWS concept
+
+1. What problem does it solve?
+2. Where does it sit in the Onion?
+3. What does it depend on?
+4. What does it provide to the next layer?
+5. Which principal needs permission?
+6. What network path is required?
+7. What is the certification-exam association?
+8. How does it connect with concepts already learned?
+
+## Repository relationship
+
+GitHub is the canonical source and backup. This vault-oriented structure is designed so the repository can also be opened directly as an Obsidian vault.
+
+- Repository: `ivnpdrn1/aws-onion`
+- GitHub documentation: `docs/`
+- Obsidian learning layer: `00_HOME/` and `01_NOTES/`
+- Future book: `book/`
