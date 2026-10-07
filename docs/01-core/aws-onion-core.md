@@ -146,3 +146,19 @@ Is the service listening/running?
 ## Core exam phrase
 
 > **ORIGIN → GATEWAY → PATH → SUBNET → RESOURCE → INTERFACE → MACHINE → SERVICE**
+
+
+## Structural Onion and Functional Onion
+
+AWS-Onion uses two complementary reasoning modes:
+
+| Model | Question |
+|---|---|
+| **Structural Onion** | What layers exist and how are they related? |
+| **Functional Onion** | When an action occurs, what changes, what persists, what is released, and what happens next? |
+
+The lifecycle of EC2 is the first complete Functional Onion example.
+
+> **Structural Onion = WHAT is connected. Functional Onion = WHAT HAPPENS NEXT.**
+
+See [AWS-Onion — Functional Onion Model](FUNCTIONAL-ONION.md).
