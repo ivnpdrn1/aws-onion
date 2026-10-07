@@ -1,5 +1,10 @@
 # AWS-Onion — Functional Onion Model
 
+> **Functional Onion is the temporal axis: THROUGH time.**  
+> Vertical Onion explains relationships BETWEEN layers; Horizontal Onion explains composition WITHIN a layer.
+
+See [Vertical, Horizontal and Functional Axes](VERTICAL-HORIZONTAL-ONION.md).
+
 ## Purpose
 
 AWS-Onion now uses two complementary views:
