@@ -52,6 +52,7 @@ See [Certification Roadmap](docs/00-roadmap/certification-roadmap.md).
 ## Current knowledge base
 
 - [Core AWS-Onion Mental Model](docs/01-core/aws-onion-core.md)
+- [Functional Onion Model](docs/01-core/FUNCTIONAL-ONION.md)
 - [EC2 Networking & Connectivity](docs/02-compute-networking/ec2-networking.md)
 - [EC2 Instance Lifecycle](docs/02-compute-networking/ec2-instance-lifecycle.md)
 - [IAM Groups, Roles & STS](docs/03-iam/roles-groups-sts.md)
@@ -63,6 +64,10 @@ See [Certification Roadmap](docs/00-roadmap/certification-roadmap.md).
 ## Memory phrases
 
 ```text
+Structural Onion = WHAT is connected.
+Functional Onion = WHAT HAPPENS NEXT.
+
+
 Actions / configuration descend.
 Status / metrics / errors / evidence return upward.
 
