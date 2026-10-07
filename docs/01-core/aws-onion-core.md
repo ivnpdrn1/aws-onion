@@ -148,17 +148,39 @@ Is the service listening/running?
 > **ORIGIN → GATEWAY → PATH → SUBNET → RESOURCE → INTERFACE → MACHINE → SERVICE**
 
 
-## Structural Onion and Functional Onion
+## Three-axis AWS-Onion model
 
-AWS-Onion uses two complementary reasoning modes:
+AWS-Onion now separates structural reasoning into two directions and preserves Functional Onion as the temporal view.
 
-| Model | Question |
-|---|---|
-| **Structural Onion** | What layers exist and how are they related? |
-| **Functional Onion** | When an action occurs, what changes, what persists, what is released, and what happens next? |
+| Model | Question | Relationship |
+|---|---|---|
+| **Vertical Onion** | What layer depends on what other layer? | Between layers |
+| **Horizontal Onion** | What components build this layer's specialty? | Within one layer |
+| **Functional Onion** | When an action occurs, what changes, persists, is released or restored? | Through time |
 
-The lifecycle of EC2 is the first complete Functional Onion example.
+~~~text
+AWS-ONION
+   │
+   ├── VERTICAL   → BETWEEN layers
+   ├── HORIZONTAL → WITHIN a layer
+   └── FUNCTIONAL → THROUGH time
+~~~
 
-> **Structural Onion = WHAT is connected. Functional Onion = WHAT HAPPENS NEXT.**
+The previous **Structural Onion** therefore contains both the Vertical and Horizontal views.
 
-See [AWS-Onion — Functional Onion Model](FUNCTIONAL-ONION.md).
+> **Vertical = BETWEEN layers. Horizontal = WITHIN a layer. Functional = THROUGH time.**
+
+For certification questions, use:
+
+> **WHERE → WHAT INSIDE → WHAT NEXT**
+
+1. **WHERE?** Locate the vertical layer.
+2. **WHAT INSIDE?** Identify the horizontal component responsible for the specialty.
+3. **WHAT NEXT?** Follow the functional effect of the action.
+
+The EC2 lifecycle is the first complete Functional Onion example. AWS Nitro is a canonical Horizontal Onion example because one infrastructure layer is built from specialized Hypervisor, VPC, storage, control and security components.
+
+See:
+- [Vertical, Horizontal and Functional Axes](VERTICAL-HORIZONTAL-ONION.md)
+- [AWS-Onion — Functional Onion Model](FUNCTIONAL-ONION.md)
+- [AWS Nitro System and Nitro Enclaves](../02-compute-networking/nitro-system-enclaves.md).
