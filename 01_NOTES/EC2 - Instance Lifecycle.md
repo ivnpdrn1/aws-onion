@@ -128,6 +128,7 @@ tags: [aws, ec2, lifecycle, ebs, networking, cloudwatch, aws-onion, tables]
 > **STOP preserves the logical machine. TERMINATE ends it.**
 
 ## Related
+- [[AWS-Onion - Functional Onion]]
 - [[AWS-Onion - Mental Model]]
 - [[EC2 - Networking and Connectivity]]
 - [[CloudWatch - Mental Model]]
