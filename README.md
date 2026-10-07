@@ -52,9 +52,11 @@ See [Certification Roadmap](docs/00-roadmap/certification-roadmap.md).
 ## Current knowledge base
 
 - [Core AWS-Onion Mental Model](docs/01-core/aws-onion-core.md)
+- [Vertical, Horizontal & Functional Axes](docs/01-core/VERTICAL-HORIZONTAL-ONION.md)
 - [Functional Onion Model](docs/01-core/FUNCTIONAL-ONION.md)
 - [EC2 Networking & Connectivity](docs/02-compute-networking/ec2-networking.md)
 - [EC2 Instance Lifecycle](docs/02-compute-networking/ec2-instance-lifecycle.md)
+- [AWS Nitro System & Nitro Enclaves](docs/02-compute-networking/nitro-system-enclaves.md)
 - [IAM Groups, Roles & STS](docs/03-iam/roles-groups-sts.md)
 - [Systems Manager](docs/04-operations/systems-manager.md)
 - [CloudWatch](docs/04-operations/cloudwatch.md)
@@ -65,7 +67,11 @@ See [Certification Roadmap](docs/00-roadmap/certification-roadmap.md).
 
 ```text
 Structural Onion = WHAT is connected.
-Functional Onion = WHAT HAPPENS NEXT.
+Vertical Onion = BETWEEN layers.
+Horizontal Onion = WITHIN a layer.
+Functional Onion = THROUGH time / WHAT HAPPENS NEXT.
+
+Exam reconstruction = WHERE → WHAT INSIDE → WHAT NEXT.
 
 
 Actions / configuration descend.
