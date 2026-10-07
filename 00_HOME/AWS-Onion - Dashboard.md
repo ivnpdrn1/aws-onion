@@ -47,6 +47,7 @@ APPLICATION
 
 ### Core
 - [[AWS-Onion - Mental Model]]
+- [[AWS-Onion - Vertical & Horizontal Onion]]
 - [[AWS-Onion - Functional Onion]]
 - [[AWS-Onion - Exam Map]]
 - [[AWS-Onion - Glossary]]
@@ -54,6 +55,7 @@ APPLICATION
 ### Networking & Compute
 - [[EC2 - Networking and Connectivity]]
 - [[EC2 - Instance Lifecycle]]
+- [[EC2 - Nitro System and Nitro Enclaves]]
 
 ### IAM
 - [[IAM - Groups Roles and STS]]
@@ -75,18 +77,22 @@ APPLICATION
 > **Agent communicates. Role authorizes. Network provides the path. SSM manages.**  
 > **↓ Actions descend. ↑ Evidence returns.**  
 > **Compute lifecycle ≠ Storage lifecycle ≠ Network-address lifecycle ≠ Physical-host identity.**  
-> **Structural Onion = WHAT is connected. Functional Onion = WHAT HAPPENS NEXT.**
+> **Vertical = BETWEEN layers. Horizontal = WITHIN a layer. Functional = THROUGH time.**  
+> **Exam reconstruction: WHERE → WHAT INSIDE → WHAT NEXT.**  
+> **Nitro = performance through specialization. Enclave = security through isolation.**
 
 ## Method for every new AWS concept
 
 1. What problem does it solve?
-2. Where does it sit in the Onion?
-3. What does it depend on?
-4. What does it provide to the next layer?
-5. Which principal needs permission?
-6. What network path is required?
-7. What is the certification-exam association?
-8. How does it connect with concepts already learned?
+2. **Vertical:** where does it sit and what layers surround it?
+3. **Horizontal:** which components build this layer's specialty?
+4. What does it depend on?
+5. What does it provide to the next layer?
+6. Which principal needs permission?
+7. What network path is required?
+8. **Functional:** what changes when an action occurs?
+9. What is the certification-exam association?
+10. How does it connect with concepts already learned?
 
 ## Repository relationship
 
