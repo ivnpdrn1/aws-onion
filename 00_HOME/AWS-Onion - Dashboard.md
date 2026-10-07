@@ -2,7 +2,7 @@
 type: dashboard
 project: AWS-Onion
 status: active
-updated: 2026-10-05
+updated: 2026-10-07
 tags: [aws-onion, aws, certification, architecture, developer, ai]
 ---
 
@@ -47,6 +47,7 @@ APPLICATION
 
 ### Core
 - [[AWS-Onion - Mental Model]]
+- [[AWS-Onion - Functional Onion]]
 - [[AWS-Onion - Exam Map]]
 - [[AWS-Onion - Glossary]]
 
@@ -73,7 +74,8 @@ APPLICATION
 > **ROLE = temporary Role session + temporary credentials.**  
 > **Agent communicates. Role authorizes. Network provides the path. SSM manages.**  
 > **↓ Actions descend. ↑ Evidence returns.**  
-> **Compute lifecycle ≠ Storage lifecycle ≠ Network-address lifecycle ≠ Physical-host identity.**
+> **Compute lifecycle ≠ Storage lifecycle ≠ Network-address lifecycle ≠ Physical-host identity.**  
+> **Structural Onion = WHAT is connected. Functional Onion = WHAT HAPPENS NEXT.**
 
 ## Method for every new AWS concept
 
