@@ -4,6 +4,34 @@
 
 This section organizes the EC2 lifecycle as a **sequence of comparison tables** so the concepts can be reviewed from several angles without losing the relationships among layers.
 
+## Functional Onion interpretation
+
+EC2 Lifecycle is the first complete example of the AWS-Onion **Functional Onion**: instead of looking only at which layers exist, we follow one lifecycle action through the EC2 and its dependent/accessory blocks.
+
+~~~text
+ACTION
+  ↓
+EC2 STATE
+  ↓
+OS / RAM
+  ↓
+EBS
+  ↓
+NETWORK IDENTITY
+  ↓
+PHYSICAL HOST
+  ↑
+STATUS / OBSERVABILITY
+  ↑
+NEXT ACTION
+~~~
+
+For every phase, the study question becomes:
+
+> **What happens to EC2 itself, and which accessories are KEPT, LOST, SAVED, RESTORED, RELEASED, DELETED, REATTACHED, or MAY CHANGE?**
+
+See [AWS-Onion — Functional Onion Model](../01-core/FUNCTIONAL-ONION.md).
+
 > **Study order:** State → Transition → Persistence → Cost/Recovery → Infrastructure condition → AWS-Onion meaning.
 
 ---
