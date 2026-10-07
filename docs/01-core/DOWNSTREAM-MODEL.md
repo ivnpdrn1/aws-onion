@@ -1,5 +1,11 @@
 # AWS-Onion — Downstream Model (Aguas Abajo)
 
+> **This document is the canonical downstream/upstream implementation of the AWS Vertical Onion.**
+
+The **Vertical Onion** explains relationships BETWEEN specialized layers. Downstream follows intent/action; upstream follows evidence/result. The complementary **Horizontal Onion** opens any one vertical layer to show the internal components that build its function.
+
+See [Vertical, Horizontal and Functional Axes](VERTICAL-HORIZONTAL-ONION.md).
+
 ## Principle
 AWS-Onion follows **causality and dependency from the origin of a flow toward its result**.
 
