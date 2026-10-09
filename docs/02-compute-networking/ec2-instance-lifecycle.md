@@ -113,6 +113,20 @@ This table compares only details explicitly presented in the lesson. Where the l
 
 > **AWS-Onion rule:** **Compute billing ≠ Storage billing.**
 
+A pricing commitment can also outlive the EC2 runtime state:
+
+~~~text
+EC2 STOPPED
+   ├── instance compute usage → stops
+   ├── EBS storage            → can continue charging
+   ├── Savings Plan term      → continues
+   └── Reserved Instance term → continues
+~~~
+
+> **Resource lifecycle ≠ Pricing commitment lifecycle.**
+
+See [EC2 Pricing Options](ec2-pricing-options.md).
+
 ---
 
 ## Table 5 — Reboot vs Stop vs Hibernate vs Terminate
@@ -151,7 +165,7 @@ This is the fastest table for exam review.
 | **Physical host** | Instance can start on a **different host** | Logical EC2 identity is abstracted from physical hardware |
 
 > **Core AWS-Onion lesson:**  
-> **Compute lifecycle ≠ Storage lifecycle ≠ Network-address lifecycle ≠ Physical-host identity.**
+> **Compute lifecycle ≠ Storage lifecycle ≠ Network-address lifecycle ≠ Physical-host identity ≠ Pricing-commitment lifecycle.**
 
 ---
 
@@ -301,4 +315,5 @@ ADMIN / AUTOMATION
 Related:
 - [AWS-Onion Downstream Model](../01-core/DOWNSTREAM-MODEL.md)
 - [EC2 Networking & Connectivity](ec2-networking.md)
+- [EC2 Pricing Options](ec2-pricing-options.md)
 - [CloudWatch](../04-operations/cloudwatch.md)
