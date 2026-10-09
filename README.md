@@ -57,6 +57,7 @@ See [Certification Roadmap](docs/00-roadmap/certification-roadmap.md).
 - [EC2 Networking & Connectivity](docs/02-compute-networking/ec2-networking.md)
 - [EC2 Instance Lifecycle](docs/02-compute-networking/ec2-instance-lifecycle.md)
 - [AWS Nitro System & Nitro Enclaves](docs/02-compute-networking/nitro-system-enclaves.md)
+- [EC2 Pricing Options](docs/02-compute-networking/ec2-pricing-options.md)
 - [IAM Groups, Roles & STS](docs/03-iam/roles-groups-sts.md)
 - [Systems Manager](docs/04-operations/systems-manager.md)
 - [CloudWatch](docs/04-operations/cloudwatch.md)
@@ -73,19 +74,28 @@ Functional Onion = THROUGH time / WHAT HAPPENS NEXT.
 
 Exam reconstruction = WHERE → WHAT INSIDE → WHAT NEXT.
 
-
 Actions / configuration descend.
 Status / metrics / errors / evidence return upward.
 
 Compute lifecycle ≠ Storage lifecycle ≠ Network-address lifecycle ≠ Physical-host identity.
+Resource lifecycle ≠ Pricing commitment lifecycle.
 
 Route ≠ Address ≠ Permission
+Price ≠ Capacity ≠ Tenancy ≠ Billing
 
 NACL protects the subnet.
 Security Group protects access to the resource/interface.
 ENI connects and identifies the machine.
 EC2 runs the operating system.
 The application provides the service.
+
+On-Demand = flexibility.
+Savings Plan = commit $/hour.
+Reserved Instance = configuration commitment.
+Spot = spare + interruptible.
+Capacity Reservation = capacity assurance.
+Dedicated Instance = isolation.
+Dedicated Host = host-level control.
 
 GROUP = same user identity + permissions through membership.
 ROLE  = temporary role session + temporary credentials.
