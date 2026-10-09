@@ -357,7 +357,59 @@ See: [AWS Nitro System and Nitro Enclaves](../02-compute-networking/nitro-system
 
 ---
 
-# 10. Memory anchors
+# 10. Example — EC2 Pricing / Capacity
+
+EC2 pricing is another strong Horizontal Onion because one architectural layer contains several mechanisms that solve different business and infrastructure problems.
+
+~~~text
+EC2 ECONOMIC / CAPACITY LAYER
+│
+├── FLEXIBILITY ............ On-Demand
+├── COMMITMENT / DISCOUNT .. Savings Plans / Reserved Instances
+├── INTERRUPTIBLE .......... Spot
+├── CAPACITY ASSURANCE ..... Capacity Reservations / Zonal RI
+└── ISOLATION / HOST CONTROL
+       ├── Dedicated Instance
+       └── Dedicated Host
+~~~
+
+The Vertical view connects business requirements to infrastructure:
+
+~~~text
+BUSINESS REQUIREMENT
+       ↓
+WORKLOAD CHARACTERISTICS
+       ↓
+PURCHASING / CAPACITY / TENANCY
+       ↓
+EC2
+       ↓
+NITRO
+       ↓
+PHYSICAL INFRASTRUCTURE
+~~~
+
+The Functional view adds time and lifecycle:
+
+~~~text
+EC2 state changes
+       ↓
+compute/storage charges can change
+       ↓
+long-term commitment may continue
+~~~
+
+Core rules:
+
+> **Price ≠ Capacity ≠ Tenancy ≠ Billing.**
+
+> **Resource lifecycle ≠ Pricing commitment lifecycle.**
+
+See: [EC2 Pricing Options through AWS-Onion](../02-compute-networking/ec2-pricing-options.md).
+
+---
+
+# 11. Memory anchors
 
 > **Vertical = BETWEEN layers.**  
 > **Horizontal = WITHIN a layer.**  
@@ -373,3 +425,5 @@ Related:
 - [Core AWS-Onion Mental Model](aws-onion-core.md)
 - [AWS-Onion Downstream Model](DOWNSTREAM-MODEL.md)
 - [AWS-Onion Functional Model](FUNCTIONAL-ONION.md)
+- [AWS Nitro System and Nitro Enclaves](../02-compute-networking/nitro-system-enclaves.md)
+- [EC2 Pricing Options](../02-compute-networking/ec2-pricing-options.md)
