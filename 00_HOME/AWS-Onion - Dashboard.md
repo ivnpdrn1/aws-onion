@@ -2,7 +2,7 @@
 type: dashboard
 project: AWS-Onion
 status: active
-updated: 2026-10-07
+updated: 2026-10-09
 tags: [aws-onion, aws, certification, architecture, developer, ai]
 ---
 
@@ -56,6 +56,7 @@ APPLICATION
 - [[EC2 - Networking and Connectivity]]
 - [[EC2 - Instance Lifecycle]]
 - [[EC2 - Nitro System and Nitro Enclaves]]
+- [[EC2 - Pricing Options]]
 
 ### IAM
 - [[IAM - Groups Roles and STS]]
@@ -71,15 +72,18 @@ APPLICATION
 
 > [!tip] Exam anchors
 > **Route ≠ Address ≠ Permission**  
+> **Price ≠ Capacity ≠ Tenancy ≠ Billing**  
 > **ENI connects. ENA accelerates. EFA coordinates clusters.**  
 > **GROUP = same identity + permissions through membership.**  
 > **ROLE = temporary Role session + temporary credentials.**  
 > **Agent communicates. Role authorizes. Network provides the path. SSM manages.**  
 > **↓ Actions descend. ↑ Evidence returns.**  
 > **Compute lifecycle ≠ Storage lifecycle ≠ Network-address lifecycle ≠ Physical-host identity.**  
+> **Resource lifecycle ≠ Pricing commitment lifecycle.**  
 > **Vertical = BETWEEN layers. Horizontal = WITHIN a layer. Functional = THROUGH time.**  
 > **Exam reconstruction: WHERE → WHAT INSIDE → WHAT NEXT.**  
-> **Nitro = performance through specialization. Enclave = security through isolation.**
+> **Nitro = performance through specialization. Enclave = security through isolation.**  
+> **On-Demand = flexibility. Savings Plan = commit $/hour. Spot = interruptible spare capacity.**
 
 ## Method for every new AWS concept
 
@@ -93,6 +97,7 @@ APPLICATION
 8. **Functional:** what changes when an action occurs?
 9. What is the certification-exam association?
 10. How does it connect with concepts already learned?
+11. **Currency check:** is the course concept still current AWS behavior?
 
 ## Repository relationship
 
