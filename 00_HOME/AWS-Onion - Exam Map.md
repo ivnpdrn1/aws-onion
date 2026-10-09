@@ -64,6 +64,7 @@ WHAT HAPPENS NEXT?
 | EC2 family + Region commitment | EC2 Instance Savings Plan |
 | configuration-based commitment | Reserved Instance |
 | steady predictable workload | Savings Plans / RI |
+| recurring fixed schedule | Scheduled Reserved — historical course concept |
 | lowest cost + fault tolerant | Spot |
 | two-minute interruption warning | Spot + EventBridge / metadata |
 | target capacity using Spot + On-Demand | Spot Fleet / EC2 Fleet |
