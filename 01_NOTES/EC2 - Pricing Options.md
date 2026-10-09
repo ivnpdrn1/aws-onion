@@ -38,6 +38,48 @@ EC2 ECONOMIC / CAPACITY LAYER
        └── Dedicated Host
 ```
 
+
+## Course examples — identify the workload first
+
+> [!important]
+> These examples come from the class screenshots. Use them to recognize **workload characteristics → purchasing option**.
+
+| Workload in the class | Think | Why |
+|---|---|---|
+| Developer, small project, several hours, cannot be interrupted | **On-Demand** | short-term + flexible + no Spot interruption |
+| Steady-state, business-critical, continuous demand | **Reserved** | predictable continuous usage |
+| Reporting app, 6 h/day, 4 days/week | **Scheduled Reserved** | predictable recurring schedule |
+| Compute-intensive, cost-sensitive, distributed, interruption-tolerant | **Spot** | interruption accepted for lower cost |
+| Security-sensitive, dedicated hardware, per-instance billing | **Dedicated Instance** | isolation |
+| Database with per-socket licensing | **Dedicated Host** | socket/core/host visibility |
+
+> [!warning]
+> **Scheduled Reserved is historical/course-era material.** Preserve it for understanding the lesson, but do not select it for a new current AWS design.
+
+### Six instant associations
+
+```text
+few hours + cannot interrupt       → ON-DEMAND
+steady + continuous                → RESERVED
+recurring fixed schedule           → SCHEDULED RESERVED [historical]
+distributed + interruptible        → SPOT
+security-sensitive + isolation     → DEDICATED INSTANCE
+per-socket licensing               → DEDICATED HOST
+```
+
+### Exam habit
+
+> **First identify the workload characteristic. Then choose the purchasing option.**
+
+```text
+WORKLOAD CLUE
+     ↓
+SPECIALTY BEING TESTED
+     ↓
+EC2 PURCHASING OPTION
+```
+
+
 ## Exam triggers
 
 | Trigger | Think |
