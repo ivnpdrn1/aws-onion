@@ -178,6 +178,101 @@ and:
 
 ---
 
+
+# 4A. Course visual examples — workload → purchasing option
+
+The class screenshots add a very useful exam-oriented layer: instead of starting with the AWS product name, start with the **workload pattern** and infer the purchasing option.
+
+| Course example | Purchasing option shown | Why the example fits | Memory trigger |
+|---|---|---|---|
+| **Developer working on a small project for several hours; cannot be interrupted** | **On-Demand** | Short-lived work, no long-term commitment, and interruption is not acceptable | **short + flexible + uninterrupted → On-Demand** |
+| **Steady-state, business-critical, line-of-business application; continuous demand** | **Reserved** | Continuous and predictable usage can justify a commitment in exchange for discount | **steady + predictable + continuous → Reserved** |
+| **Reporting application, runs for 6 hours a day, 4 days per week** | **Scheduled Reserved** | The course uses this to illustrate predictable recurring usage at known times | **recurring schedule → Scheduled Reserved (historical)** |
+| **Compute-intensive, cost-sensitive distributed computing; can withstand interruption** | **Spot Instances** | Distributed workload can tolerate loss of instances and prioritizes low cost | **distributed + cost-sensitive + interruptible → Spot** |
+| **Security-sensitive application, requires dedicated hardware; per-instance billing** | **Dedicated Instances** | The requirement is physical isolation from other customers, while billing is tied to instances | **isolation + per-instance → Dedicated Instance** |
+| **Database with per-socket licensing** | **Dedicated Hosts** | Host-level socket/core visibility supports server-bound licensing | **socket/core licensing → Dedicated Host** |
+
+## Read the examples by function, not by product name
+
+~~~text
+WORKLOAD REQUIREMENT
+       │
+       ├── short-lived + cannot be interrupted
+       │      └── On-Demand
+       │
+       ├── steady + continuous
+       │      └── Reserved
+       │
+       ├── predictable recurring schedule
+       │      └── Scheduled Reserved  [COURSE / HISTORICAL]
+       │
+       ├── distributed + interruption tolerant
+       │      └── Spot
+       │
+       ├── security-sensitive + dedicated hardware
+       │      └── Dedicated Instance
+       │
+       └── per-socket / server-bound licensing
+              └── Dedicated Host
+~~~
+
+This creates a high-value certification habit:
+
+> **Do not ask first: “Which EC2 pricing product do I remember?”**  
+> **Ask first: “What characteristic of the workload is AWS testing?”**
+
+## Horizontal Onion — examples mapped to specialties
+
+| Horizontal specialty | Course example | AWS option |
+|---|---|---|
+| **Flexibility** | small developer project for several hours | On-Demand |
+| **Predictable commitment** | continuous line-of-business application | Reserved |
+| **Recurring schedule** | reporting app 6 hours/day, 4 days/week | Scheduled Reserved — historical |
+| **Interruptible low-cost compute** | distributed compute that tolerates interruption | Spot |
+| **Physical isolation** | security-sensitive workload | Dedicated Instance |
+| **Host-level licensing/control** | database licensed per socket | Dedicated Host |
+
+## Current-AWS warning for the course examples
+
+The **Scheduled Reserved** example must remain in the repository because it is part of the course material and illustrates the intended exam relationship. However:
+
+> **Scheduled Reserved Instances are a historical/course-era concept and should not be selected for a new current AWS architecture.**
+
+For current design work, separate the underlying need from the historical product:
+
+~~~text
+"Runs on a predictable recurring schedule"
+            ↓
+first identify the CURRENT capacity / scheduling / commitment mechanism
+rather than automatically choosing Scheduled Reserved
+~~~
+
+The other five examples remain useful as conceptual workload-to-option associations, subject to the current-AWS corrections elsewhere in this document.
+
+## Six one-line exam anchors
+
+~~~text
+Developer / few hours / no interruption
+→ ON-DEMAND
+
+Steady-state / continuous business workload
+→ RESERVED
+
+Recurring fixed schedule
+→ SCHEDULED RESERVED  [historical course concept]
+
+Distributed / cost-sensitive / interruption tolerant
+→ SPOT
+
+Security-sensitive / dedicated hardware / per-instance
+→ DEDICATED INSTANCE
+
+Per-socket licensing / host visibility
+→ DEDICATED HOST
+~~~
+
+---
+
 # 5. On-Demand
 
 Course and current AWS agree on the central concept:
