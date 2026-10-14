@@ -58,6 +58,7 @@ APPLICATION
 - [[EC2 - Nitro System and Nitro Enclaves]]
 - [[EC2 - Pricing Options]]
 - [[EC2 - Architecture Patterns and Auto Scaling]]
+- [[ALB - Target Groups and Auto Scaling Functional Onion]]
 - [[NAT Gateway - Private to Public Functional Onion]]
 
 ### IAM
