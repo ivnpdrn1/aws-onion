@@ -59,6 +59,7 @@ APPLICATION
 - [[EC2 - Pricing Options]]
 - [[EC2 - Architecture Patterns and Auto Scaling]]
 - [[ALB - Target Groups and Auto Scaling Functional Onion]]
+- [[EC2 - Architecture Patterns EIP NAT Bastion]]
 - [[NAT Gateway - Private to Public Functional Onion]]
 
 ### IAM
