@@ -123,6 +123,10 @@ Spot = what interruptible spare capacity can we exploit?
 8. Physical core licensing? → Dedicated Host.
 9. Who receives HTTP requests: ASG or ALB? → ALB → EC2 targets, not through ASG.
 
+## Target Group — key missing link
+
+See [[ALB - Target Groups and Auto Scaling Functional Onion]] for the full table: client → ALB listener/rules → logical Target Group selection → EC2 ENI/app, and independent CloudWatch → policy → ASG → registration → health checks. **Target Group is not a physical network hop.**
+
 ## Cross-links
 - [[EC2 - Pricing Options]]
 - [[EC2 - Networking and Connectivity]]
