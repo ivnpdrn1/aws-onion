@@ -26,6 +26,25 @@ IMDS uses the link-local address `169.254.169.254`; IMDSv2 uses a token.
 
 The private IP belongs to the ENI. The ENI is the virtual NIC connecting the instance to the VPC.
 
+### Choosing ENI, ENA or EFA for HPC
+
+| Component | Role | When |
+|---|---|---|
+| ENI | Virtual network interface with IP addresses and security groups | EC2 connectivity to a VPC |
+| ENA | Enhanced Networking for high-performance ordinary IP traffic | Web services, databases and high-throughput TCP/IP |
+| EFA | Specialized high-performance interface with OS-bypass for supported HPC software | Tightly coupled HPC and distributed training requiring low-latency inter-node communication |
+| Cluster Placement Group | Places EC2 instances near each other in one Availability Zone | Complements EFA by optimizing placement |
+
+These are not three mutually exclusive alternatives. EFA interfaces may provide ENA functionality for ordinary IP networking; EFA-only interfaces support specialized traffic without conventional IP networking.
+
+**Two functional paths:**
+```text
+Conventional: Application -> OS TCP/IP stack -> ENA -> AWS network
+HPC:          HPC application -> MPI/libfabric -> EFA OS-bypass -> AWS network
+```
+
+**Exam cue:** tightly coupled HPC + low latency between nodes = Cluster Placement Group + EFA (when supported). Cluster optimizes placement; EFA optimizes communication. ENI provides connectivity, not the specialized HPC transport.
+
 ## Placement Groups
 
 - **Cluster** → together → performance.
