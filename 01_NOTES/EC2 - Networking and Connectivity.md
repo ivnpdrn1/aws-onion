@@ -78,6 +78,24 @@ Related: [[EC2 - Nitro System and Nitro Enclaves]], [[EC2 - Architecture Pattern
 - **Spread** → separate individual instances → resilience.
 - **Partition** → separate groups → distributed systems.
 
+## SSH Key Pair vs IAM Access Key — authentication boundaries (2026-10-15)
+
+| Question | EC2 SSH Key Pair | AWS Access Key ID + Secret Access Key |
+|---|---|---|
+| Who authenticates you? | SSH server inside EC2 guest OS | AWS API authentication (Signature Version 4) |
+| What is the secret? | SSH private key (often .pem) | Secret Access Key (often with session token for temporary creds) |
+| What is public / identifier? | SSH public key authorized on EC2 | Access Key ID identifies AWS credential |
+| What does it authorize? | Linux login as configured user, subject to OS permissions | AWS API requests subject to IAM policy, permissions boundaries, SCPs, etc. |
+| Used for? | `ssh -i key.pem ec2-user@IP` | `aws ec2 describe-instances`, SDKs and AWS API calls |
+
+**Functional Onion — SSH:** user SSH client/private key → network/IGW/routing/SG/NACL → EC2 ENI → sshd in guest → SSH public-key authentication → OS authorization.
+
+**Functional Onion — API:** CLI/SDK → IAM credentials sign request → AWS API authenticates caller and checks permissions → service action.
+
+**Do not conflate:** Access keys are **not** SSH key pairs. A private SSH key never needs to be sent to EC2. An EC2 instance does not require an SSH key pair if managed using SSM Session Manager or other authorized methods. For code running on EC2, **prefer an IAM role (instance profile) with temporary credentials**, not hard-coded IAM access keys.
+
+**Exam:** Amazon Linux 2 traditional SSH authentication → **key pair**; AWS API with CLI → AWS credentials / IAM role, not SSH key pair.
+
 ## Administration paths
 
 ```text
