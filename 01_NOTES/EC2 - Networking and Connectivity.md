@@ -45,6 +45,33 @@ HPC:          HPC application -> MPI/libfabric -> EFA OS-bypass -> AWS network
 
 **Exam cue:** tightly coupled HPC + low latency between nodes = Cluster Placement Group + EFA (when supported). Cluster optimizes placement; EFA optimizes communication. ENI provides connectivity, not the specialized HPC transport.
 
+## Architecture patterns: Spread vs ENA vs Nitro (2026-10-15)
+
+| Need | AWS choice | Why it fits | Why not the other choices |
+|---|---|---|---|
+| Minimize correlated physical host failure for a small group of critical EC2 | **Spread Placement Group** | Places separate instances on distinct underlying hardware | Cluster optimizes proximity; Partition isolates sets of instances, not each individual instance |
+| Enhanced conventional TCP/IP networking | **ENA**, with supported EC2 type and driver | Efficient, high-throughput IP networking | ENI provides network identity but not necessarily enhanced networking; EFA is specialized for supported HPC communication |
+| Near bare-metal virtual-machine efficiency | **EC2 built on AWS Nitro System** | Lightweight hypervisor plus specialized offload for I/O and security | Dedicated Host concerns tenancy and hardware control, not the general virtualization architecture |
+
+**Additional HPC requirement:** A Nitro-based instance does not automatically support EFA. If EFA is required, explicitly choose an EFA-compatible instance type and supporting AMI/software; often pair it with Cluster Placement Group for tightly coupled HPC.
+
+### Vertical / Horizontal / Functional Onion
+
+- **Physical placement:** Spread separates *individual* instances to reduce (not eliminate) correlated host failures; use multi-AZ architecture for AZ failure resilience.
+- **Network technology:** ENI is the network interface identity. ENA accelerates ordinary IP networking. EFA provides specialized OS-bypass communication for compatible HPC applications; these concepts are not always mutually exclusive.
+- **Virtualization substrate:** Nitro is the system enabling efficient EC2 virtualization and hardware offload. It is not equivalent to EFA or a Dedicated Host.
+
+```text
+Requirement → decide fault domain → Spread / Partition / Cluster
+Requirement → decide networking mode → ENA (IP) / EFA (HPC)
+Requirement → decide compute substrate → Nitro-compatible EC2 family
+Then verify instance-type compatibility, AZ capacity, AMI driver and SG.
+```
+
+**Exam recall:** Spread = separate machines; ENA = accelerated IP; EFA = HPC OS-bypass; Nitro = EC2 underlying virtualization and hardware offload.
+
+Related: [[EC2 - Nitro System and Nitro Enclaves]], [[EC2 - Architecture Patterns and Auto Scaling]], [[AWS-Onion - Functional Onion]].
+
 ## Placement Groups
 
 - **Cluster** → together → performance.
