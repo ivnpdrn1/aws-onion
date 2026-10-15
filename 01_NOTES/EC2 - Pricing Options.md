@@ -135,6 +135,21 @@ WHAT HAPPENS NEXT?
 
 > **WHERE → WHAT INSIDE → WHAT NEXT**
 
+## Exam scenario — Per-socket licenses and host placement (2026-10-15)
+
+**Question:** Organization uses per-socket licensed software and needs control over EC2 placement on underlying physical hardware.
+
+**Correct:** Dedicated Hosts. Host-level identification, visibility into physical sockets/cores and placement/affinity controls support eligible bring-your-own-license requirements (always verify vendor license rules).
+
+| Option | What it solves | Why it is not the answer |
+|---|---|---|
+| Dedicated Hosts | Dedicated physical host and placement control, socket/core visibility | **Meets both explicit requirements** |
+| Dedicated Instances | Single-tenant hardware isolation for EC2 | No equivalent host ID, physical socket/core visibility and host placement control |
+| Reserved Instances | Billing discount; some zonal RI capacity reservation | Not a physical host allocation or socket licensing mechanism |
+| Spot Instances | Discounted, interruptible spare EC2 capacity | Not hardware placement or host-based license control |
+
+**Memory rule:** **Dedicated Instance = isolate my VM; Dedicated Host = identify and place my VM on a physical server.** Discount (RI), spare capacity (Spot), tenancy (Dedicated Instance) and host control (Dedicated Host) are *different decision axes*.
+
 ## Related
 - [[AWS-Onion - Vertical & Horizontal Onion]]
 - [[EC2 - Instance Lifecycle]]
