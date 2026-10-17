@@ -47,6 +47,7 @@ APPLICATION
 
 ### Core
 - [[AWS-Onion - Mental Model]]
+- [[AWS-Onion - Verbo Rector y Service DNA]]
 - [[AWS-Onion - Vertical & Horizontal Onion]]
 - [[AWS-Onion - Functional Onion]]
 - [[AWS-Onion - Exam Map]]
