@@ -49,6 +49,14 @@ AWS-Onion is being built around:
 
 See [Certification Roadmap](docs/00-roadmap/certification-roadmap.md).
 
+## LEGO normalization — service-first composition
+
+- [AWS-Onion LEGO Architecture Map](00_HOME/AWS-Onion%20-%20LEGO%20Architecture%20Map.md)
+- [Service DNA catalog: 18 AWS building blocks](02_SERVICES/README.md)
+- [Reusable architecture blueprints](03_BLUEPRINTS/README.md)
+
+**Standard:** VERB → OBJECT → RESPONSIBILITY → RELATIONSHIPS → ARCHITECTURE DECISION. Each service has upstream/downstream interfaces and scope; designs combine pieces by requirement and keep DNS, data, control and observability planes distinct. Existing notes remain under `01_NOTES` and detailed manuals under `docs/`.
+
 ## Current knowledge base
 
 - [Verbo rector y Service DNA](01_NOTES/AWS-Onion%20-%20Verbo%20Rector%20y%20Service%20DNA.md)
