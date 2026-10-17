@@ -2,7 +2,7 @@
 type: dashboard
 project: AWS-Onion
 status: active
-updated: 2026-10-14
+updated: 2026-10-16
 tags: [aws-onion, aws, certification, architecture, developer, ai]
 ---
 
@@ -59,6 +59,7 @@ APPLICATION
 - [[EC2 - Pricing Options]]
 - [[EC2 - Architecture Patterns and Auto Scaling]]
 - [[ALB - Target Groups and Auto Scaling Functional Onion]]
+- [[Route 53 - DNS vs Load Balancing Multi-Region Onion]]
 - [[EC2 - Architecture Patterns EIP NAT Bastion]]
 - [[NAT Gateway - Private to Public Functional Onion]]
 
@@ -88,6 +89,8 @@ APPLICATION
 > **Exam reconstruction: WHERE → WHAT INSIDE → WHAT NEXT.**  
 > **Nitro = performance through specialization. Enclave = security through isolation.**  
 > **On-Demand = flexibility. Savings Plan = commit $/hour. Spot = interruptible spare capacity.**
+> **Route 53 = WHERE ENDPOINT/REGION. ALB = WHICH TARGET. ASG = HOW MANY. EC2 = EXECUTE.**
+> **DNS is NOT inline with HTTP data traffic; ELB IS inline.**
 > **ALB = WHICH EC2. ASG = HOW MANY EC2. CloudWatch = WHAT IS HAPPENING.**
 > **Scaling Policy = WHEN/WHY TO RESIZE. RI/Savings Plans = BILLING DISCOUNT, not an ASG scaling action.**
 
