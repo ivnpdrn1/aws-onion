@@ -91,6 +91,12 @@ El orden del gráfico es **lógico**, no implica que Route 53, Target Group, Clo
 
 **El verbo es el gancho de memoria; las relaciones son el conocimiento arquitectónico.**
 
+## Catálogo implementado
+
+- [[AWS-Onion - LEGO Architecture Map]]
+- Directorio `02_SERVICES/` con 18 fichas normalizadas; notas detalladas en `01_NOTES/`.
+- Cada pieza lleva puertos de entrada/salida, alcance y límites; no confundir **relación lógica** con secuencia de paquetes.
+
 ## Relaciones
 - [[Route 53 - DNS vs Load Balancing Multi-Region Onion]]
 - [[ALB - Target Groups and Auto Scaling Functional Onion]]
