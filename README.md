@@ -54,6 +54,7 @@ See [Certification Roadmap](docs/00-roadmap/certification-roadmap.md).
 - [Core AWS-Onion Mental Model](docs/01-core/aws-onion-core.md)
 - [Vertical, Horizontal & Functional Axes](docs/01-core/VERTICAL-HORIZONTAL-ONION.md)
 - [Functional Onion Model](docs/01-core/FUNCTIONAL-ONION.md)
+- [Route 53 — DNS vs Load Balancing (Obsidian note)](01_NOTES/Route%2053%20-%20DNS%20vs%20Load%20Balancing%20Multi-Region%20Onion.md)
 - [EC2 Networking & Connectivity](docs/02-compute-networking/ec2-networking.md)
 - [EC2 Instance Lifecycle](docs/02-compute-networking/ec2-instance-lifecycle.md)
 - [AWS Nitro System & Nitro Enclaves](docs/02-compute-networking/nitro-system-enclaves.md)
@@ -79,6 +80,9 @@ Status / metrics / errors / evidence return upward.
 
 Compute lifecycle ≠ Storage lifecycle ≠ Network-address lifecycle ≠ Physical-host identity.
 Resource lifecycle ≠ Pricing commitment lifecycle.
+
+Route 53 = WHERE endpoint/region. ELB = WHICH target in-region. ASG = HOW MANY. EC2 = EXECUTE.
+DNS answers queries; ELB is inline with application traffic.
 
 Route ≠ Address ≠ Permission
 Price ≠ Capacity ≠ Tenancy ≠ Billing
