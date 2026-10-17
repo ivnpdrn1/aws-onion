@@ -43,6 +43,13 @@ COMPUTE
 APPLICATION
 ```
 
+## LEGO architecture — start here
+
+- [[AWS-Onion - LEGO Architecture Map]] — assemble interoperable services from requirements
+- [[AWS-Onion - Verbo Rector y Service DNA]] — normalized service contract
+- [[Route 53]] · [[ALB]] · [[Target Group]] · [[EC2]] · [[CloudWatch]] · [[Auto Scaling Group]] — traffic and capacity
+- [[VPC]] · [[Subnet]] · [[Route Table]] · [[Security Group]] · [[ENI]] — network assembly
+
 ## Navigation
 
 ### Core
