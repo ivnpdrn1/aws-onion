@@ -51,6 +51,7 @@ See [Certification Roadmap](docs/00-roadmap/certification-roadmap.md).
 
 ## Current knowledge base
 
+- [Verbo rector y Service DNA](01_NOTES/AWS-Onion%20-%20Verbo%20Rector%20y%20Service%20DNA.md)
 - [Core AWS-Onion Mental Model](docs/01-core/aws-onion-core.md)
 - [Vertical, Horizontal & Functional Axes](docs/01-core/VERTICAL-HORIZONTAL-ONION.md)
 - [Functional Onion Model](docs/01-core/FUNCTIONAL-ONION.md)
