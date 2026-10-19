@@ -57,6 +57,8 @@ See [Certification Roadmap](docs/00-roadmap/certification-roadmap.md).
 
 **Standard:** VERB → OBJECT → RESPONSIBILITY → RELATIONSHIPS → ARCHITECTURE DECISION. Each service has upstream/downstream interfaces and scope; designs combine pieces by requirement and keep DNS, data, control and observability planes distinct. Existing notes remain under `01_NOTES` and detailed manuals under `docs/`.
 
+- [Scaling Up vs Scaling Out — Stateful / Stateless](01_NOTES/Scaling%20Up%20vs%20Scaling%20Out%20-%20Stateful%20Stateless%20Functional%20Onion.md)
+
 ## Current knowledge base
 
 - [Verbo rector y Service DNA](01_NOTES/AWS-Onion%20-%20Verbo%20Rector%20y%20Service%20DNA.md)
