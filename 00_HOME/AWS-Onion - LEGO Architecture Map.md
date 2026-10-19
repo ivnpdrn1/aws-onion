@@ -92,3 +92,12 @@ not_its_job: <common wrong choice>
 - [[AWS-Onion - Functional Onion]]
 - [[Route 53 - DNS vs Load Balancing Multi-Region Onion]]
 - [[ALB - Target Groups and Auto Scaling Functional Onion]]
+
+## 9. LEGO D — Scaling Up vs Scaling Out (Stateful / Stateless)
+
+**ENLARGE** (larger instance) vs **REPLICATE** (more instances). To scale a replaceable web tier, **EXTERNALIZE** the necessary state via [[Amazon EFS]] (SHARE), [[Amazon RDS]] (PERSIST), or [[Amazon DynamoDB]] (STORE), selected by data model, not installed by default.
+
+Traffic: Route 53 DNS resolution → ALB DISTRIBUTE → EC2 EXECUTE.
+Control: CloudWatch OBSERVE → scaling policy → ASG ADJUST → EC2 registration with Target Group.
+
+Study: [[Scaling Up vs Scaling Out - Stateful Stateless Functional Onion]].
