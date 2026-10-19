@@ -60,6 +60,10 @@ APPLICATION
 - [[AWS-Onion - Exam Map]]
 - [[AWS-Onion - Glossary]]
 
+### Scaling & State
+- [[Scaling Up vs Scaling Out - Stateful Stateless Functional Onion]]
+- [[Amazon EFS]] · [[Amazon RDS]] · [[Amazon DynamoDB]] — externalize persistent state
+
 ### Networking & Compute
 - [[EC2 - Networking and Connectivity]]
 - [[EC2 - Instance Lifecycle]]
