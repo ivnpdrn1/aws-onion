@@ -10,3 +10,9 @@ Las fichas de este directorio normalizan y enlazan las notas desarrolladas exist
 **Requirement → Verbo → Objeto → Scope → Interfaces → Plano → Fallo → Elección → Validación.**
 
 Para más detalle, ver [[AWS-Onion - Verbo Rector y Service DNA]].
+
+## Scaling / persistence LEGO blocks
+- [[Amazon EFS]] — SHARE files
+- [[Amazon RDS]] — PERSIST relational data
+- [[Amazon DynamoDB]] — STORE NoSQL items
+- [[Scaling Up vs Scaling Out - Stateful Stateless Functional Onion]] — ENLARGE vs REPLICATE and EXTERNALIZE STATE
