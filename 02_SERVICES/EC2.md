@@ -37,3 +37,9 @@ tags: [aws-onion, service-dna, lego, certification]
 - [[EC2 - Instance Lifecycle]]
 - [[AWS-Onion - LEGO Architecture Map]]
 - [[AWS-Onion - Verbo Rector y Service DNA]]
+
+## Scaling Up vs Scaling Out — relación incorporada
+- [[Scaling Up vs Scaling Out - Stateful Stateless Functional Onion]]
+- **ENLARGE**: más recursos para una sola instancia; **REPLICATE**: más instancias para trabajo distribuible.
+- **EXTERNALIZE STATE** cuando el estado local impida reemplazar instancias; opciones por requisito: [[Amazon EFS]], [[Amazon RDS]], [[Amazon DynamoDB]].
+- **ALB DISTRIBUTE**, **CloudWatch OBSERVE**, **ASG ADJUST**, **EC2 EXECUTE**: funciones complementarias, no saltos seriales del tráfico.
