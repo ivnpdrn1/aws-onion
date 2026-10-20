@@ -130,3 +130,7 @@ Working concept:
 **AWS-Onion: Understanding AWS Through Relationships Between Layers**
 
 The objective is not merely to remember what each AWS service does. It is to be able to **reconstruct an architecture from the relationships among its layers**.
+
+## EC2 Auto Scaling — relación integrada
+- [EC2 Auto Scaling — MAINTAIN + ADJUST](01_NOTES/EC2%20Auto%20Scaling%20-%20Maintain%20Adjust%20Functional%20Onion.md)
+**Launch Template DEFINE → ASG MAINTAIN → CloudWatch OBSERVE / Scaling Policy DEFINE RESPONSE → ASG ADJUST → EC2 EXECUTE.** ELB DISTRIBUTE; Target Group GROUP/CHECK. Los health checks EC2 y ELB tienen alcances distintos. Consultar la nota para las modalidades manual, dynamic, predictive y scheduled y las distinciones Scaling Up/Out y stateful/stateless.
