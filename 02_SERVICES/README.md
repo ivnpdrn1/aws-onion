@@ -16,3 +16,7 @@ Para más detalle, ver [[AWS-Onion - Verbo Rector y Service DNA]].
 - [[Amazon RDS]] — PERSIST relational data
 - [[Amazon DynamoDB]] — STORE NoSQL items
 - [[Scaling Up vs Scaling Out - Stateful Stateless Functional Onion]] — ENLARGE vs REPLICATE and EXTERNALIZE STATE
+
+## EC2 Auto Scaling — relación integrada
+- [[EC2 Auto Scaling - Maintain Adjust Functional Onion]]
+**Launch Template DEFINE → ASG MAINTAIN → CloudWatch OBSERVE / Scaling Policy DEFINE RESPONSE → ASG ADJUST → EC2 EXECUTE.** ELB DISTRIBUTE; Target Group GROUP/CHECK. Los health checks EC2 y ELB tienen alcances distintos. Consultar la nota para las modalidades manual, dynamic, predictive y scheduled y las distinciones Scaling Up/Out y stateful/stateless.
