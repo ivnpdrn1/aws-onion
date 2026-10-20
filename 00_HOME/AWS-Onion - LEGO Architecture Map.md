@@ -101,3 +101,7 @@ Traffic: Route 53 DNS resolution → ALB DISTRIBUTE → EC2 EXECUTE.
 Control: CloudWatch OBSERVE → scaling policy → ASG ADJUST → EC2 registration with Target Group.
 
 Study: [[Scaling Up vs Scaling Out - Stateful Stateless Functional Onion]].
+
+## EC2 Auto Scaling — relación integrada
+- [[EC2 Auto Scaling - Maintain Adjust Functional Onion]]
+**Launch Template DEFINE → ASG MAINTAIN → CloudWatch OBSERVE / Scaling Policy DEFINE RESPONSE → ASG ADJUST → EC2 EXECUTE.** ELB DISTRIBUTE; Target Group GROUP/CHECK. Los health checks EC2 y ELB tienen alcances distintos. Consultar la nota para las modalidades manual, dynamic, predictive y scheduled y las distinciones Scaling Up/Out y stateful/stateless.
