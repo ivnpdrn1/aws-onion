@@ -140,3 +140,10 @@ The objective is not merely to remember what each AWS service does. It is to be 
 - [Ficha Service DNA: EC2 User Data BOOTSTRAP](02_SERVICES/EC2%20User%20Data%20-%20Bootstrap%20LEGO%20Service%20DNA.md)
 
 **Cadena LEGO:** Launch Template DEFINE → ASG MAINTAIN → EC2 EXECUTE → User Data BOOTSTRAP → Apache SERVE → Target Group CHECK → ALB DISTRIBUTE; IMDSv2 DISCOVER contextualiza la instancia y CloudWatch OBSERVE retroalimenta escalado.
+
+## Resiliencia — AWS-ONION-LEGO (2026-10-23)
+- [High Availability vs Fault Tolerance vs Durability — explicación integrada](01_NOTES/High%20Availability%20Fault%20Tolerance%20Durability%20-%20AWS%20Onion%20LEGO.md)
+- [Reliability LEGO — ficha de ensamblaje](02_SERVICES/Reliability%20-%20High%20Availability%20Fault%20Tolerance%20Durability%20LEGO.md)
+- [Semilla de capítulo del libro — Cuando falla una pieza](book/CHAPTER-SEED-Resilience-When-One-LEGO-Fails.md)
+
+**Memory phrase:** EC2 EXECUTE; ELB DISTRIBUTE; ASG MAINTAIN; Multi-AZ ISOLATE failure; HA MINIMIZE downtime; FT RESIST specified faults; durability PRESERVE data.
