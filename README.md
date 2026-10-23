@@ -134,3 +134,9 @@ The objective is not merely to remember what each AWS service does. It is to be 
 ## EC2 Auto Scaling — relación integrada
 - [EC2 Auto Scaling — MAINTAIN + ADJUST](01_NOTES/EC2%20Auto%20Scaling%20-%20Maintain%20Adjust%20Functional%20Onion.md)
 **Launch Template DEFINE → ASG MAINTAIN → CloudWatch OBSERVE / Scaling Policy DEFINE RESPONSE → ASG ADJUST → EC2 EXECUTE.** ELB DISTRIBUTE; Target Group GROUP/CHECK. Los health checks EC2 y ELB tienen alcances distintos. Consultar la nota para las modalidades manual, dynamic, predictive y scheduled y las distinciones Scaling Up/Out y stateful/stateless.
+
+## EC2 User Data — LEGO de arranque y servidor web
+- [Análisis línea por línea: Apache, Bash, IMDSv2, HTML y alternativas](01_NOTES/EC2%20User%20Data%20-%20Bootstrap%20Apache%20IMDSv2%20LEGO%20Onion.md)
+- [Ficha Service DNA: EC2 User Data BOOTSTRAP](02_SERVICES/EC2%20User%20Data%20-%20Bootstrap%20LEGO%20Service%20DNA.md)
+
+**Cadena LEGO:** Launch Template DEFINE → ASG MAINTAIN → EC2 EXECUTE → User Data BOOTSTRAP → Apache SERVE → Target Group CHECK → ALB DISTRIBUTE; IMDSv2 DISCOVER contextualiza la instancia y CloudWatch OBSERVE retroalimenta escalado.
