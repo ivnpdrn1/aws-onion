@@ -20,3 +20,7 @@ Para más detalle, ver [[AWS-Onion - Verbo Rector y Service DNA]].
 ## EC2 Auto Scaling — relación integrada
 - [[EC2 Auto Scaling - Maintain Adjust Functional Onion]]
 **Launch Template DEFINE → ASG MAINTAIN → CloudWatch OBSERVE / Scaling Policy DEFINE RESPONSE → ASG ADJUST → EC2 EXECUTE.** ELB DISTRIBUTE; Target Group GROUP/CHECK. Los health checks EC2 y ELB tienen alcances distintos. Consultar la nota para las modalidades manual, dynamic, predictive y scheduled y las distinciones Scaling Up/Out y stateful/stateless.
+
+## Bootstrapping LEGO — EC2 User Data
+- [[EC2 User Data - Bootstrap LEGO Service DNA]] — BOOTSTRAP: contrato, límites, upstream/downstream y decisiones de arquitectura
+- [[EC2 User Data - Bootstrap Apache IMDSv2 LEGO Onion]] — guía exhaustiva Bash/Yum/Systemd/IMDSv2/HTML con alternativas Apache vs Nginx/containers, fallos, exámenes
