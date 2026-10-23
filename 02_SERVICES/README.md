@@ -24,3 +24,7 @@ Para más detalle, ver [[AWS-Onion - Verbo Rector y Service DNA]].
 ## Bootstrapping LEGO — EC2 User Data
 - [[EC2 User Data - Bootstrap LEGO Service DNA]] — BOOTSTRAP: contrato, límites, upstream/downstream y decisiones de arquitectura
 - [[EC2 User Data - Bootstrap Apache IMDSv2 LEGO Onion]] — guía exhaustiva Bash/Yum/Systemd/IMDSv2/HTML con alternativas Apache vs Nginx/containers, fallos, exámenes
+
+## Reliability LEGO — HA / FT / Durability
+- [[Reliability - High Availability Fault Tolerance Durability LEGO]] — ensamblaje con dominios de fallo, diferencias, trade-offs y opciones descartadas.
+- [[High Availability Fault Tolerance Durability - AWS Onion LEGO]] — explicación de la dinámica y preguntas para certificación.
