@@ -129,3 +129,8 @@ If an explanation helps answer an exam question **and** helps reconstruct a real
 > **Do not memorize the onion. Understand why each layer needs the next one.**
 
 That relationship is what turns AWS terminology into architecture.
+
+## Capítulo en preparación: resiliencia LEGO
+- [Cuando falla una pieza LEGO](CHAPTER-SEED-Resilience-When-One-LEGO-Fails.md)
+- La prueba editorial de cada capítulo será poder reconstruir decisiones arquitectónicas al retirar una pieza: qué falla, quién detecta, quién redirige, quién repone, qué datos sobreviven y qué experimenta el usuario.
+- Estructura narrativa: problema cotidiano → VERBO/OBJETO/RESPONSABILIDAD → relaciones LEGO → fallo → recuperación → elección alternativa → certificación.
