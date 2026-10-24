@@ -147,3 +147,9 @@ The objective is not merely to remember what each AWS service does. It is to be 
 - [Semilla de capítulo del libro — Cuando falla una pieza](book/CHAPTER-SEED-Resilience-When-One-LEGO-Fails.md)
 
 **Memory phrase:** EC2 EXECUTE; ELB DISTRIBUTE; ASG MAINTAIN; Multi-AZ ISOLATE failure; HA MINIMIZE downtime; FT RESIST specified faults; durability PRESERVE data.
+
+## Elastic Load Balancing — AWS-ONION-LEGO (2026-10-23)
+- [ELB Service DNA — DISTRIBUTE](02_SERVICES/Elastic%20Load%20Balancing%20-%20Distribute%20LEGO%20Service%20DNA.md)
+- [Book chapter seed — When One Door Has Many Servers](book/CHAPTER-SEED-ELB-When-One-Door-Has-Many-Servers.md)
+
+**LEGO:** Route 53 RESOLVE → listener ACCEPT → ALB DISTRIBUTE → Target Group GROUP/TEST → EC2 EXECUTE; ASG MAINTAIN/ADJUST and CloudWatch OBSERVE operate alongside the data plane. ALB = HTTP content, NLB = network connections, GWLB = security inspection. ELB health routing is distinct from ASG instance replacement and cannot by itself preserve application sessions.
