@@ -134,3 +134,7 @@ That relationship is what turns AWS terminology into architecture.
 - [Cuando falla una pieza LEGO](CHAPTER-SEED-Resilience-When-One-LEGO-Fails.md)
 - La prueba editorial de cada capítulo será poder reconstruir decisiones arquitectónicas al retirar una pieza: qué falla, quién detecta, quién redirige, quién repone, qué datos sobreviven y qué experimenta el usuario.
 - Estructura narrativa: problema cotidiano → VERBO/OBJETO/RESPONSABILIDAD → relaciones LEGO → fallo → recuperación → elección alternativa → certificación.
+
+## Capítulo en preparación: la puerta con varios servidores
+- [Elastic Load Balancing — When One Door Has Many Servers](CHAPTER-SEED-ELB-When-One-Door-Has-Many-Servers.md)
+- La analogía del coordinador que distribuye clientes enseña ALB DISTRIBUTE, Listener ACCEPT, TG GROUP, Health Check TEST, ASG MAINTAIN y CloudWatch OBSERVE. La historia evita confundir retirar un target unhealthy con conservar una sesión existente o reemplazar automáticamente la instancia.
