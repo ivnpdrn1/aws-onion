@@ -153,3 +153,6 @@ The objective is not merely to remember what each AWS service does. It is to be 
 - [Book chapter seed — When One Door Has Many Servers](book/CHAPTER-SEED-ELB-When-One-Door-Has-Many-Servers.md)
 
 **LEGO:** Route 53 RESOLVE → listener ACCEPT → ALB DISTRIBUTE → Target Group GROUP/TEST → EC2 EXECUTE; ASG MAINTAIN/ADJUST and CloudWatch OBSERVE operate alongside the data plane. ALB = HTTP content, NLB = network connections, GWLB = security inspection. ELB health routing is distinct from ASG instance replacement and cannot by itself preserve application sessions.
+
+## ELB reinforcement after six exam rounds
+- [ELB assessment learning gaps](01_NOTES/ELB%20-%20Assessment%20Reinforcement%20LEGO.md): 6/10, 6/10, 7/10, 9/10, 9/10, 10/10; focus on GWLB vs ALB, networking, state, and resiliency. Open-answer validation remains.
