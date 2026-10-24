@@ -32,3 +32,6 @@ Para más detalle, ver [[AWS-Onion - Verbo Rector y Service DNA]].
 ## Elastic Load Balancing LEGO — distribution and failure response
 - [[Elastic Load Balancing - Distribute LEGO Service DNA]] — ELB DISTRIBUTE; listeners ACCEPT, Target Groups GROUP, health checks TEST, ASG MAINTAIN. Contratos de plano de datos y control, ALB vs NLB vs GWLB, decisiones y errores de examen.
 - [[Elastic Load Balancing - Cuando la puerta tiene varios servidores]] — analogía didáctica y semilla de capítulo (en GitHub: `book/CHAPTER-SEED-ELB-When-One-Door-Has-Many-Servers.md`).
+
+## ELB assessment reinforcement
+- [[ELB - Assessment Reinforcement LEGO]]: six rounds; distinctions between ALB, NLB and GWLB; DNS, sessions, and fault domains.
