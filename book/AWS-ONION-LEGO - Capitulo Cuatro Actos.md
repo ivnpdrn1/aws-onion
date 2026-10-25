@@ -49,3 +49,6 @@ Route 53 > Hosted zones; VPC > Your VPCs, Internet gateways, Subnets, Route tabl
 
 ## Continuación editorial
 Expandir cada acto con un diagrama arquitectónico, ejercicio real en AWS Console, experimento de fallo y decisión SAA; mantener analogía, precisión y accesibilidad antes que jerga. Unificar la ilustración de la pizarra con estos cuatro bloques. Véase [[AWS-ONION-LEGO - Cuatro Bloques Secuenciales]] y [[AWS-ONION-LEGO - Ciudad Intuitiva y AWS Console]].
+
+## Nota editorial — La ruta que parecía faltar
+En el barrio privado también hay **Route Table**. Todo barrio-subnet la tiene, propia o heredada de la principal VPC. Por ello, la plantilla narrativa idéntica es **Subnet + Route Table + NACL + Security Group**. Public usa salida al IGW; Private conserva la ruta local y puede usar NAT para salida IPv4. No representar «VPC Internal Routing» y «Private Route Table» como dos aparatos que se atraviesan: la ruta local pertenece a las tablas. Este descubrimiento es un momento clave del capítulo: dos barrios, una sola gramática.
