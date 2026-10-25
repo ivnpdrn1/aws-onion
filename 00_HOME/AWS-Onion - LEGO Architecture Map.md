@@ -112,3 +112,6 @@ Study: [[Scaling Up vs Scaling Out - Stateful Stateless Functional Onion]].
 
 ## Método de cuatro bloques — comienzo recomendado
 [[AWS-ONION-LEGO - Cuatro Bloques Secuenciales]] — ENCONTRAR → ENTRAR → DISTRIBUIR → EJECUTAR. Patrón público/privado reusable: Subnet + Route Table + NACL + Security Group. Profundizar luego en [[AWS-ONION-LEGO - Ciudad Intuitiva y AWS Console]]. Borrador editorial: [[AWS-ONION-LEGO - Capitulo Cuatro Actos]].
+
+## Simetría corregida — PUBLIC / PRIVATE
+Ambas subnets tienen Route Table asociada (explícita o principal de VPC). **SUBNET → ROUTE TABLE → NACL → SG** es el patrón A–B–C en ambos lados. VPC Internal Routing describe el uso de rutas locales, no una segunda tabla independiente en serie. Detalle: [[AWS-ONION-LEGO - Cuatro Bloques Secuenciales]].
