@@ -35,3 +35,7 @@ Para más detalle, ver [[AWS-Onion - Verbo Rector y Service DNA]].
 
 ## ELB assessment reinforcement
 - [[ELB - Assessment Reinforcement LEGO]]: six rounds; distinctions between ALB, NLB and GWLB; DNS, sessions, and fault domains.
+
+## Ruta de aprendizaje natural + AWS Console
+
+- [[AWS-ONION-LEGO - Ciudad Intuitiva y AWS Console]] — mapa narrativo de 19 componentes, tabla de configuración por servicio, familias LOCALIZAR/CONECTAR/PROTEGER/DISTRIBUIR/EJECUTAR y control transversal de disponibilidad. Se conserva el Service DNA de cada pieza.
