@@ -39,3 +39,6 @@ Para más detalle, ver [[AWS-Onion - Verbo Rector y Service DNA]].
 ## Ruta de aprendizaje natural + AWS Console
 
 - [[AWS-ONION-LEGO - Ciudad Intuitiva y AWS Console]] — mapa narrativo de 19 componentes, tabla de configuración por servicio, familias LOCALIZAR/CONECTAR/PROTEGER/DISTRIBUIR/EJECUTAR y control transversal de disponibilidad. Se conserva el Service DNA de cada pieza.
+
+## Entrada intuitiva antes del catálogo
+[[AWS-ONION-LEGO - Cuatro Bloques Secuenciales]]: ENCONTRAR → ENTRAR → DISTRIBUIR → EJECUTAR. PUBLIC y PRIVATE reutilizan subnet, route table, NACL y SG con parámetros diferentes. Luego estudiar [[AWS-ONION-LEGO - Ciudad Intuitiva y AWS Console]] y las fichas Service DNA.
