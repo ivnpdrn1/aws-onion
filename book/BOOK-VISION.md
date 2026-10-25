@@ -138,3 +138,7 @@ That relationship is what turns AWS terminology into architecture.
 ## Capítulo en preparación: la puerta con varios servidores
 - [Elastic Load Balancing — When One Door Has Many Servers](CHAPTER-SEED-ELB-When-One-Door-Has-Many-Servers.md)
 - La analogía del coordinador que distribuye clientes enseña ALB DISTRIBUTE, Listener ACCEPT, TG GROUP, Health Check TEST, ASG MAINTAIN y CloudWatch OBSERVE. La historia evita confundir retirar un target unhealthy con conservar una sesión existente o reemplazar automáticamente la instancia.
+
+## Capítulo troncal: cuatro actos
+- [Una solicitud, cuatro actos](AWS-ONION-LEGO%20-%20Capitulo%20Cuatro%20Actos.md): ENCONTRAR → ENTRAR → DISTRIBUIR → EJECUTAR.
+- [[AWS-ONION-LEGO - Cuatro Bloques Secuenciales]]: plantilla PUBLIC y PRIVATE, límites de analogía, AWS Console, alternativas y examen.
