@@ -96,3 +96,21 @@ aliases: [AWS ONION LEGO Ciudad, Arquitectura intuitiva AWS Console]
 Inicio: [[AWS-Onion - LEGO Architecture Map]].
 Profundización: [[Elastic Load Balancing - Distribute LEGO Service DNA]], [[ALB - Target Groups and Auto Scaling Functional Onion]], [[EC2 Auto Scaling - Maintain Adjust Functional Onion]], [[AWS-Onion - Verbo Rector y Service DNA]].
 El repositorio contiene notas Markdown con wikilinks de Obsidian; para verlas en la aplicación Obsidian es necesario abrir/sincronizar este repositorio como vault o su carpeta de notas.
+
+## Corrección canónica — Simetría de las dos subnets (2026-10-24)
+
+> [!important] La pieza que faltaba
+> **Toda subnet tiene una route table asociada**, explícitamente o mediante la main route table de la VPC. Por eso PUBLIC y PRIVATE usan la misma plantilla: **SUBNET → ROUTE TABLE → NACL → SECURITY GROUP**. Es un orden mental de configuración, no una cadena de cuatro dispositivos físicos. El SG se asocia al recurso o ENI, no a la subnet.
+
+| Patrón A–B–C | PUBLIC (recepción ALB) | PRIVATE (EC2 trabajador) |
+|---|---|---|
+| **A1 SUBNET** | Subnet pública donde se habilita el ALB | Subnet privada donde reside EC2 |
+| **A2 ROUTE TABLE** | Ruta local + ruta predeterminada 0.0.0.0/0 hacia IGW | Ruta local; ruta 0.0.0.0/0 a NAT Gateway solo cuando hace falta salida IPv4; **sin ruta directa IGW** |
+| **B NACL** | Filtra tráfico en límite subnet pública (stateless) | Filtra tráfico en límite subnet privada (stateless) |
+| **C SECURITY GROUP** | Protege ENI/recurso ALB (stateful) | Protege ENI/recurso EC2 (stateful) |
+
+**Evitar doble conteo:** el anterior elemento 14 «VPC Internal Routing» describe la función lógica que la ruta **local** de las tablas de la VPC cumple entre ALB y EC2, mientras que «Private Route Table» es el recurso concreto asociado a la subnet privada. **No son dos route tables que el paquete atraviesa en serie.** Para contar 19 piezas, sustituir el rótulo 14 «VPC Internal Routing» por una nota sobre rutas locales y nombrar **Private Route Table** en el bloque privado. Si se añaden ambos como entradas didácticas, serán 20 rótulos pero no 20 saltos de red.
+
+**Consola:** VPC → Subnets → [Private Subnet] → Route table (verificar asociación, incluso si hereda la principal). También VPC → Route tables → Subnet associations / Routes.
+
+**Regla de memoria:** «Dos barrios, la misma gramática A–B–C; cambian rutas, reglas y destino». La naturaleza pública de la subnet la define la ruta al IGW, no la mera palabra Public del nombre.
