@@ -109,3 +109,6 @@ Study: [[Scaling Up vs Scaling Out - Stateful Stateless Functional Onion]].
 ## Nuevo — La ciudad intuitiva y AWS Console
 
 - [[AWS-ONION-LEGO - Ciudad Intuitiva y AWS Console]] — historia en cuatro actos, 19 piezas, analogía de ciudad/recepción/oficina, configuración en AWS Console, planos DNS/datos/control y preguntas de examen. **Método: necesidad → analogía → verbo → objeto → responsabilidad → relaciones → consola → decisión.**
+
+## Método de cuatro bloques — comienzo recomendado
+[[AWS-ONION-LEGO - Cuatro Bloques Secuenciales]] — ENCONTRAR → ENTRAR → DISTRIBUIR → EJECUTAR. Patrón público/privado reusable: Subnet + Route Table + NACL + Security Group. Profundizar luego en [[AWS-ONION-LEGO - Ciudad Intuitiva y AWS Console]]. Borrador editorial: [[AWS-ONION-LEGO - Capitulo Cuatro Actos]].
