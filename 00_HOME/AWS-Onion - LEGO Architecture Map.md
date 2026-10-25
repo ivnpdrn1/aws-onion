@@ -105,3 +105,7 @@ Study: [[Scaling Up vs Scaling Out - Stateful Stateless Functional Onion]].
 ## EC2 Auto Scaling — relación integrada
 - [[EC2 Auto Scaling - Maintain Adjust Functional Onion]]
 **Launch Template DEFINE → ASG MAINTAIN → CloudWatch OBSERVE / Scaling Policy DEFINE RESPONSE → ASG ADJUST → EC2 EXECUTE.** ELB DISTRIBUTE; Target Group GROUP/CHECK. Los health checks EC2 y ELB tienen alcances distintos. Consultar la nota para las modalidades manual, dynamic, predictive y scheduled y las distinciones Scaling Up/Out y stateful/stateless.
+
+## Nuevo — La ciudad intuitiva y AWS Console
+
+- [[AWS-ONION-LEGO - Ciudad Intuitiva y AWS Console]] — historia en cuatro actos, 19 piezas, analogía de ciudad/recepción/oficina, configuración en AWS Console, planos DNS/datos/control y preguntas de examen. **Método: necesidad → analogía → verbo → objeto → responsabilidad → relaciones → consola → decisión.**
