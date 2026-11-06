@@ -142,3 +142,6 @@ That relationship is what turns AWS terminology into architecture.
 ## Capítulo troncal: cuatro actos
 - [Una solicitud, cuatro actos](AWS-ONION-LEGO%20-%20Capitulo%20Cuatro%20Actos.md): ENCONTRAR → ENTRAR → DISTRIBUIR → EJECUTAR.
 - [[AWS-ONION-LEGO - Cuatro Bloques Secuenciales]]: plantilla PUBLIC y PRIVATE, límites de analogía, AWS Console, alternativas y examen.
+
+## Capítulo en preparación: Disaster Recovery entre regiones
+- [La tienda que espera apagada](CHAPTER-SEED-Disaster-Recovery-The-Store-Waiting.md): la analogía de la tienda secundaria sin personal (ASG Desired=0) permite explicar snapshots, recuperación de capacidad, RTO/RPO y comparación Backup & Restore / Pilot Light / Warm Standby / Active-Active.
