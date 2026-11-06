@@ -156,3 +156,8 @@ The objective is not merely to remember what each AWS service does. It is to be 
 
 ## ELB reinforcement after six exam rounds
 - [ELB assessment learning gaps](01_NOTES/ELB%20-%20Assessment%20Reinforcement%20LEGO.md): 6/10, 6/10, 7/10, 9/10, 9/10, 10/10; focus on GWLB vs ALB, networking, state, and resiliency. Open-answer validation remains.
+
+## Disaster Recovery entre regiones — AWS-ONION-LEGO
+- [Blueprint: ASG en cero + snapshots cross-region](03_BLUEPRINTS/Cross%20Region%20Disaster%20Recovery%20-%20ASG%20Zero%20Snapshots%20AWS%20Onion%20LEGO.md)
+- [Semilla editorial: la tienda que espera apagada](book/CHAPTER-SEED-Disaster-Recovery-The-Store-Waiting.md)
+- Concepto: Multi-AZ no equivale a Multi-Region; snapshots PRESERVE, ASG MAINTAIN, ALB DISTRIBUTE, Route 53 RESOLVE/FAILOVER. RTO/RPO determinan la decisión.
