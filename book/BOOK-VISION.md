@@ -145,3 +145,6 @@ That relationship is what turns AWS terminology into architecture.
 
 ## Capítulo en preparación: Disaster Recovery entre regiones
 - [La tienda que espera apagada](CHAPTER-SEED-Disaster-Recovery-The-Store-Waiting.md): la analogía de la tienda secundaria sin personal (ASG Desired=0) permite explicar snapshots, recuperación de capacidad, RTO/RPO y comparación Backup & Restore / Pilot Light / Warm Standby / Active-Active.
+
+## Capítulo — AWS Organizations
+- [La empresa con varios edificios](CHAPTER-SEED-AWS-Organizations-Many-Buildings.md): la separación entre fronteras de cuentas, reglas organizativas SCP, permisos IAM y credenciales temporales STS; errores reales de tres rondas de preguntas para aprendizaje causal.
