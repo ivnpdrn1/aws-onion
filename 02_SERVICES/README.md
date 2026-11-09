@@ -42,3 +42,7 @@ Para más detalle, ver [[AWS-Onion - Verbo Rector y Service DNA]].
 
 ## Entrada intuitiva antes del catálogo
 [[AWS-ONION-LEGO - Cuatro Bloques Secuenciales]]: ENCONTRAR → ENTRAR → DISTRIBUIR → EJECUTAR. PUBLIC y PRIVATE reutilizan subnet, route table, NACL y SG con parámetros diferentes. Luego estudiar [[AWS-ONION-LEGO - Ciudad Intuitiva y AWS Console]] y las fichas Service DNA.
+
+## Governance LEGO — AWS Organizations
+- [[AWS Organizations - Organize Govern Assume LEGO Service DNA]] — origen del problema multiaccount; root vs root user, management vs member, OU vs IAM Group, SCP vs IAM, trust vs permissions, rol y STS.
+- [[AWS Organizations - Exam Rounds and Learning Gaps]] — evolución de evaluación 8/10 → 8/10 → 10/10 y preguntas abiertas siguientes.
