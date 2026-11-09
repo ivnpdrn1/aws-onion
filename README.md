@@ -161,3 +161,9 @@ The objective is not merely to remember what each AWS service does. It is to be 
 - [Blueprint: ASG en cero + snapshots cross-region](03_BLUEPRINTS/Cross%20Region%20Disaster%20Recovery%20-%20ASG%20Zero%20Snapshots%20AWS%20Onion%20LEGO.md)
 - [Semilla editorial: la tienda que espera apagada](book/CHAPTER-SEED-Disaster-Recovery-The-Store-Waiting.md)
 - Concepto: Multi-AZ no equivale a Multi-Region; snapshots PRESERVE, ASG MAINTAIN, ALB DISTRIBUTE, Route 53 RESOLVE/FAILOVER. RTO/RPO determinan la decisión.
+
+## AWS Organizations — Governance ONION (2026-11-09)
+- [Service DNA — Organizations, OU, SCP, IAM, STS](02_SERVICES/AWS%20Organizations%20-%20Organize%20Govern%20Assume%20LEGO%20Service%20DNA.md)
+- [Exam learning gaps — rounds 8/10, 8/10, 10/10](01_NOTES/AWS%20Organizations%20-%20Exam%20Rounds%20and%20Learning%20Gaps.md)
+- [Book seed — Many Buildings](book/CHAPTER-SEED-AWS-Organizations-Many-Buildings.md)
+**Chain:** Organizations ORGANIZE → OU GROUP → SCP LIMIT; IAM AUTHORIZE → STS ASSUME → Role Session ADMINISTER. SCP does not grant permission; Management Account differs from Member Account.
