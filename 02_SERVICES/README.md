@@ -46,3 +46,7 @@ Para más detalle, ver [[AWS-Onion - Verbo Rector y Service DNA]].
 ## Governance LEGO — AWS Organizations
 - [[AWS Organizations - Organize Govern Assume LEGO Service DNA]] — origen del problema multiaccount; root vs root user, management vs member, OU vs IAM Group, SCP vs IAM, trust vs permissions, rol y STS.
 - [[AWS Organizations - Exam Rounds and Learning Gaps]] — evolución de evaluación 8/10 → 8/10 → 10/10 y preguntas abiertas siguientes.
+
+## SCP Strategies / Inheritance — Governance LEGO
+- [[SCP Strategies and Inheritance - Architecture LEGO]] — Deny List vs Allow List, FullAWSAccess, per-level union vs cross-level intersection, Root/OU/Account, Deny precedence, decision alternatives.
+- [[SCP - Exam Rounds and Learning Gaps]] — errors behind 6/10 followed by 10/10 and next open architecture test.
