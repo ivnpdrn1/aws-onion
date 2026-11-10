@@ -167,3 +167,9 @@ The objective is not merely to remember what each AWS service does. It is to be 
 - [Exam learning gaps — rounds 8/10, 8/10, 10/10](01_NOTES/AWS%20Organizations%20-%20Exam%20Rounds%20and%20Learning%20Gaps.md)
 - [Book seed — Many Buildings](book/CHAPTER-SEED-AWS-Organizations-Many-Buildings.md)
 **Chain:** Organizations ORGANIZE → OU GROUP → SCP LIMIT; IAM AUTHORIZE → STS ASSUME → Role Session ADMINISTER. SCP does not grant permission; Management Account differs from Member Account.
+
+## SCP Strategies & Inheritance — AWS-ONION-LEGO (2026-11-09)
+- [SCP Service DNA / architecture decision](02_SERVICES/SCP%20Strategies%20and%20Inheritance%20-%20Architecture%20LEGO.md)
+- [Assessment 6/10 → 10/10 and failure analysis](01_NOTES/SCP%20-%20Exam%20Rounds%20and%20Learning%20Gaps.md)
+- [Book chapter seed — The Building Rule and the Key](book/CHAPTER-SEED-SCP-The-Building-Rule-and-Key.md)
+- **Memory:** SCP LIMIT ≠ IAM AUTHORIZE; Allows union within a level; intersection across Root/OU/Account; explicit Deny prevails. Plan Deny List / Allow List by business constraints.
