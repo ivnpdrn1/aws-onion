@@ -148,3 +148,6 @@ That relationship is what turns AWS terminology into architecture.
 
 ## Capítulo — AWS Organizations
 - [La empresa con varios edificios](CHAPTER-SEED-AWS-Organizations-Many-Buildings.md): la separación entre fronteras de cuentas, reglas organizativas SCP, permisos IAM y credenciales temporales STS; errores reales de tres rondas de preguntas para aprendizaje causal.
+
+## SCP Chapter — La regla del edificio y la llave
+- [The Building Rule and the Key](CHAPTER-SEED-SCP-The-Building-Rule-and-Key.md): el gobierno corporativo limita operaciones sin entregar permisos IAM; experimento de Allow/Deny e intersección por jerarquía, sustentado por las rondas 6/10 y 10/10.
