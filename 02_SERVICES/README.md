@@ -50,3 +50,7 @@ Para más detalle, ver [[AWS-Onion - Verbo Rector y Service DNA]].
 ## SCP Strategies / Inheritance — Governance LEGO
 - [[SCP Strategies and Inheritance - Architecture LEGO]] — Deny List vs Allow List, FullAWSAccess, per-level union vs cross-level intersection, Root/OU/Account, Deny precedence, decision alternatives.
 - [[SCP - Exam Rounds and Learning Gaps]] — errors behind 6/10 followed by 10/10 and next open architecture test.
+
+## AWS Control Tower — Landing Zone and Governance
+- [[AWS Control Tower - Orchestrate Landing Zone LEGO]] — necesidad, Service DNA, Organizations/SCP/IAM Identity Center, Account Factory, cuentas compartidas y controles Preventive/Detective/Proactive.
+- [[AWS Control Tower - Exam Memory and Round 1]] — primera evaluación completada 10/10, Nivel 2 de diseño abierto pendiente.
