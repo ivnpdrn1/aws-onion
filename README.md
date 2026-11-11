@@ -173,3 +173,9 @@ The objective is not merely to remember what each AWS service does. It is to be 
 - [Assessment 6/10 → 10/10 and failure analysis](01_NOTES/SCP%20-%20Exam%20Rounds%20and%20Learning%20Gaps.md)
 - [Book chapter seed — The Building Rule and the Key](book/CHAPTER-SEED-SCP-The-Building-Rule-and-Key.md)
 - **Memory:** SCP LIMIT ≠ IAM AUTHORIZE; Allows union within a level; intersection across Root/OU/Account; explicit Deny prevails. Plan Deny List / Allow List by business constraints.
+
+## AWS Control Tower — AWS-ONION-LEGO (2026-11-11)
+- [Service DNA: Orchestrate Landing Zone](02_SERVICES/AWS%20Control%20Tower%20-%20Orchestrate%20Landing%20Zone%20LEGO.md)
+- [Exam memory: Ronda 1 10/10](01_NOTES/AWS%20Control%20Tower%20-%20Exam%20Memory%20and%20Round%201.md)
+- [Book seed: El arquitecto de los edificios](book/CHAPTER-SEED-Control-Tower-Architect-of-Buildings.md)
+**Relación:** Organizations ORGANIZE → Control Tower ORCHESTRATE; Account Factory PROVISION; IAM Identity Center ACCESS; CloudTrail RECORD; Log Archive PRESERVE; Audit INSPECT; Config EVALUATE; controls PREVENT/DETECT/VALIDATE.
