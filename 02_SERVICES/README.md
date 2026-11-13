@@ -54,3 +54,9 @@ Para más detalle, ver [[AWS-Onion - Verbo Rector y Service DNA]].
 ## AWS Control Tower — Landing Zone and Governance
 - [[AWS Control Tower - Orchestrate Landing Zone LEGO]] — necesidad, Service DNA, Organizations/SCP/IAM Identity Center, Account Factory, cuentas compartidas y controles Preventive/Detective/Proactive.
 - [[AWS Control Tower - Exam Memory and Round 1]] — primera evaluación completada 10/10, Nivel 2 de diseño abierto pendiente.
+
+## Network addressing foundation — Subnet Mask and CIDR (2026-11-13)
+- [[Subnet Mask and CIDR - Define Network Boundary LEGO]] — ficha conceptual (no servicio AWS) con **SEPARATE → EXPRESS**.
+- [[Subnet Mask CIDR Network ID Host ID - AWS ONION LEGO]] — AND binario, Network ID, Host ID, /24 vs /25, cinco IPv4 reservadas por AWS subnet y VPC/AZ.
+- [[Subnet]] — **SEGMENT**: cómo convertir los rangos CIDR en subnets ubicadas en una AZ.
+- Memoria: **Address ≠ Mask ≠ Route ≠ Permission**.
