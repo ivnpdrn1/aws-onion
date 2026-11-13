@@ -179,3 +179,10 @@ The objective is not merely to remember what each AWS service does. It is to be 
 - [Exam memory: Ronda 1 10/10](01_NOTES/AWS%20Control%20Tower%20-%20Exam%20Memory%20and%20Round%201.md)
 - [Book seed: El arquitecto de los edificios](book/CHAPTER-SEED-Control-Tower-Architect-of-Buildings.md)
 **Relación:** Organizations ORGANIZE → Control Tower ORCHESTRATE; Account Factory PROVISION; IAM Identity Center ACCESS; CloudTrail RECORD; Log Archive PRESERVE; Audit INSPECT; Config EVALUATE; controls PREVENT/DETECT/VALIDATE.
+
+## Subnet Mask, CIDR y límites de red — AWS-ONION-LEGO (2026-11-13)
+- [Guía: Subnet Mask, CIDR, Network ID y Host ID](01_NOTES/Subnet%20Mask%20CIDR%20Network%20ID%20Host%20ID%20-%20AWS%20ONION%20LEGO.md)
+- [Ficha LEGO: Subnet Mask / CIDR — SEPARATE y EXPRESS](02_SERVICES/Subnet%20Mask%20and%20CIDR%20-%20Define%20Network%20Boundary%20LEGO.md)
+- [Capítulo semilla: La frontera invisible de la red](book/CHAPTER-SEED-Subnet-Mask-The-Invisible-Boundary.md)
+- **Cadena:** IPv4 IDENTIFY → Mask SEPARATE → CIDR EXPRESS → VPC ISOLATE → Subnet SEGMENT → Route Table ROUTE → SG/NACL FILTER → ENI CONNECT → EC2 EXECUTE.
+- **/24 → /25:** 256 → 128 direcciones totales; AWS: 251 → 123 IPv4 asignables por subnet. Es una pieza conceptual de networking, no un servicio AWS.
