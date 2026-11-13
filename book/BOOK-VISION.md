@@ -154,3 +154,8 @@ That relationship is what turns AWS terminology into architecture.
 
 ## AWS Control Tower — Capítulo para el libro
 - [El arquitecto de los edificios](CHAPTER-SEED-Control-Tower-Architect-of-Buildings.md): Control Tower orquesta la landing zone sobre Organizations, con acceso, logging, auditoría y controles; evita confundir Audit con Log Archive y detección con remediación.
+
+## Networking chapter seed — La frontera invisible de la red (2026-11-13)
+- [Subnet Mask — The Invisible Boundary](CHAPTER-SEED-Subnet-Mask-The-Invisible-Boundary.md): dos vecinos comparten una dirección sin saber a qué «barrio» pertenece; la máscara revela la frontera, CIDR la expresa y la Route Table explica el viaje entre redes.
+- Ancla numérica: /24 = 256 totales (251 asignables en AWS); /25 = 128 totales (123 asignables). Una máscara más larga da un bloque más pequeño.
+- **Relación editorial:** concepto → LEGO de [[Subnet]] / [[Route Table]] → decisión de capacidad y AZ → error de diseño → examen. Fuente técnica: [[Subnet Mask CIDR Network ID Host ID - AWS ONION LEGO]].
