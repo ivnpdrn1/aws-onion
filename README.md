@@ -186,3 +186,9 @@ The objective is not merely to remember what each AWS service does. It is to be 
 - [Capítulo semilla: La frontera invisible de la red](book/CHAPTER-SEED-Subnet-Mask-The-Invisible-Boundary.md)
 - **Cadena:** IPv4 IDENTIFY → Mask SEPARATE → CIDR EXPRESS → VPC ISOLATE → Subnet SEGMENT → Route Table ROUTE → SG/NACL FILTER → ENI CONNECT → EC2 EXECUTE.
 - **/24 → /25:** 256 → 128 direcciones totales; AWS: 251 → 123 IPv4 asignables por subnet. Es una pieza conceptual de networking, no un servicio AWS.
+
+## VPC Subnet Types — INBOUND / OUTBOUND (2026-11-17)
+- [Service DNA: cuatro subnets y rutas de ida y retorno](02_SERVICES/Subnet%20Types%20-%20Inbound%20Outbound%20AWS%20Onion%20LEGO.md)
+- [Exam memory: routing bidireccional](01_NOTES/Subnet%20Types%20-%20Bidirectional%20Routing%20Exam%20Memory.md)
+- [Book seed: la ciudad de cuatro barrios](book/CHAPTER-SEED-Subnet-Types-Four-Neighborhoods.md)
+**LEGO:** CIDR PARTITION → Route Table ROUTE (destination/longest prefix) → IGW CONNECT o NAT TRANSLATE o VGW VPN CONNECT → SG/NACL FILTER → ENI/EC2 EXECUTE. Inbound ≠ outbound, ruta ≠ conectividad garantizada.
