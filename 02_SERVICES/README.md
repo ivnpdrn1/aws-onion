@@ -60,3 +60,7 @@ Para más detalle, ver [[AWS-Onion - Verbo Rector y Service DNA]].
 - [[Subnet Mask CIDR Network ID Host ID - AWS ONION LEGO]] — AND binario, Network ID, Host ID, /24 vs /25, cinco IPv4 reservadas por AWS subnet y VPC/AZ.
 - [[Subnet]] — **SEGMENT**: cómo convertir los rangos CIDR en subnets ubicadas en una AZ.
 - Memoria: **Address ≠ Mask ≠ Route ≠ Permission**.
+
+## Subnet Types — INBOUND / OUTBOUND
+- [[Subnet Types - Inbound Outbound AWS Onion LEGO]] — Public / Private / VPN-only / Isolated, Route Tables con rutas local/IGW/NAT/VGW, IP origen/destino, bidireccionalidad, SG vs NACL, decisión arquitectónica y límites.
+- [[Subnet Types - Bidirectional Routing Exam Memory]] — casos de diagnóstico y examen abierto.
