@@ -159,3 +159,6 @@ That relationship is what turns AWS terminology into architecture.
 - [Subnet Mask — The Invisible Boundary](CHAPTER-SEED-Subnet-Mask-The-Invisible-Boundary.md): dos vecinos comparten una dirección sin saber a qué «barrio» pertenece; la máscara revela la frontera, CIDR la expresa y la Route Table explica el viaje entre redes.
 - Ancla numérica: /24 = 256 totales (251 asignables en AWS); /25 = 128 totales (123 asignables). Una máscara más larga da un bloque más pequeño.
 - **Relación editorial:** concepto → LEGO de [[Subnet]] / [[Route Table]] → decisión de capacidad y AZ → error de diseño → examen. Fuente técnica: [[Subnet Mask CIDR Network ID Host ID - AWS ONION LEGO]].
+
+## Capítulo — La ciudad de cuatro barrios
+- [Subnet Types: Four Neighborhoods](CHAPTER-SEED-Subnet-Types-Four-Neighborhoods.md): narrar cómo la IP de destino y Route Table deciden el próximo target, por qué NAT no admite nuevas conexiones entrantes, por qué las subnets aisladas admiten comunicación local y cómo SG/NACL afectan el retorno.
