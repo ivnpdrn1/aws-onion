@@ -192,3 +192,9 @@ The objective is not merely to remember what each AWS service does. It is to be 
 - [Exam memory: routing bidireccional](01_NOTES/Subnet%20Types%20-%20Bidirectional%20Routing%20Exam%20Memory.md)
 - [Book seed: la ciudad de cuatro barrios](book/CHAPTER-SEED-Subnet-Types-Four-Neighborhoods.md)
 **LEGO:** CIDR PARTITION → Route Table ROUTE (destination/longest prefix) → IGW CONNECT o NAT TRANSLATE o VGW VPN CONNECT → SG/NACL FILTER → ENI/EC2 EXECUTE. Inbound ≠ outbound, ruta ≠ conectividad garantizada.
+
+## NAT Gateways & NAT Instances — AWS-ONION-LEGO (2026-11-17)
+- [Service DNA: NAT Translate / inbound & outbound](02_SERVICES/NAT%20Gateway%20and%20NAT%20Instance%20-%20Translate%20LEGO.md)
+- [Exam decision matrix and failure diagnosis](01_NOTES/NAT%20-%20Exam%20Decision%20Matrix%20and%20Failure%20Scenarios.md)
+- [Book seed: The Shared Exit of the City](book/CHAPTER-SEED-NAT-The-Shared-Exit-of-the-City.md)
+**Chain:** EC2 private INITIATE → Private Route Table ROUTE → Public NAT Gateway TRANSLATE → IGW CONNECT → external API RESPOND. Compare NAT Instance, Private NAT, Multi-AZ and Endpoints.
