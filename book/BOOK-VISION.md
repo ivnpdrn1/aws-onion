@@ -162,3 +162,6 @@ That relationship is what turns AWS terminology into architecture.
 
 ## Capítulo — La ciudad de cuatro barrios
 - [Subnet Types: Four Neighborhoods](CHAPTER-SEED-Subnet-Types-Four-Neighborhoods.md): narrar cómo la IP de destino y Route Table deciden el próximo target, por qué NAT no admite nuevas conexiones entrantes, por qué las subnets aisladas admiten comunicación local y cómo SG/NACL afectan el retorno.
+
+## NAT — capítulo ciudad LEGO
+- [La salida compartida de la ciudad](CHAPTER-SEED-NAT-The-Shared-Exit-of-the-City.md): partida de oficinas EC2 privadas hacia APIs Internet, NAT como intermediario con dirección pública, regreso por estado de flujo y redundancia por AZ. Diferenciar entrada de clientes por ALB de salida de servidores por NAT.
