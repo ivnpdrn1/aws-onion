@@ -64,3 +64,7 @@ Para más detalle, ver [[AWS-Onion - Verbo Rector y Service DNA]].
 ## Subnet Types — INBOUND / OUTBOUND
 - [[Subnet Types - Inbound Outbound AWS Onion LEGO]] — Public / Private / VPN-only / Isolated, Route Tables con rutas local/IGW/NAT/VGW, IP origen/destino, bidireccionalidad, SG vs NACL, decisión arquitectónica y límites.
 - [[Subnet Types - Bidirectional Routing Exam Memory]] — casos de diagnóstico y examen abierto.
+
+## NAT — outbound translation and HA
+- [[NAT Gateway and NAT Instance - Translate LEGO]] — necesidad de NAT público/privado; rutas, Elastic IP, NAT Instance, source/destination check, alta disponibilidad por AZ, límites de inbound y alternativas.
+- [[NAT - Exam Decision Matrix and Failure Scenarios]] — disparadores y diagnósticos de certificación.
