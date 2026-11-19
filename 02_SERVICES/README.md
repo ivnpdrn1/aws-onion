@@ -68,3 +68,7 @@ Para más detalle, ver [[AWS-Onion - Verbo Rector y Service DNA]].
 ## NAT — outbound translation and HA
 - [[NAT Gateway and NAT Instance - Translate LEGO]] — necesidad de NAT público/privado; rutas, Elastic IP, NAT Instance, source/destination check, alta disponibilidad por AZ, límites de inbound y alternativas.
 - [[NAT - Exam Decision Matrix and Failure Scenarios]] — disparadores y diagnósticos de certificación.
+
+## AWS VPC Prefix Lists — Group / Reference / Reuse
+- [[Prefix Lists - Group Reference Reuse LEGO]] — necesidad de simplificar CIDR, AWS-managed vs customer-managed, Source Security Groups, Destination Route Tables, IPv4/IPv6, CloudFront/S3/DynamoDB, límites, quotas y decisión.
+- [[Prefix Lists - Exam Rounds 1 and 2]] — dos evaluaciones 10/10 y problemas arquitectónicos abiertos futuros.
