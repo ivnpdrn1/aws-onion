@@ -198,3 +198,9 @@ The objective is not merely to remember what each AWS service does. It is to be 
 - [Exam decision matrix and failure diagnosis](01_NOTES/NAT%20-%20Exam%20Decision%20Matrix%20and%20Failure%20Scenarios.md)
 - [Book seed: The Shared Exit of the City](book/CHAPTER-SEED-NAT-The-Shared-Exit-of-the-City.md)
 **Chain:** EC2 private INITIATE → Private Route Table ROUTE → Public NAT Gateway TRANSLATE → IGW CONNECT → external API RESPOND. Compare NAT Instance, Private NAT, Multi-AZ and Endpoints.
+
+## AWS VPC Prefix Lists — AWS-ONION-LEGO (2026-11-18)
+- [Service DNA: GROUP → REFERENCE → REUSE](02_SERVICES/Prefix%20Lists%20-%20Group%20Reference%20Reuse%20LEGO.md)
+- [Certificación: Rondas 1 y 2, 10/10 ambas](01_NOTES/Prefix%20Lists%20-%20Exam%20Rounds%201%20and%202.md)
+- [Book seed: el directorio compartido de direcciones](book/CHAPTER-SEED-Prefix-Lists-Shared-Address-Directory.md)
+**Relaciones:** Prefix List GROUP CIDR; Security Group ALLOW; Route Table ROUTE; NAT TRANSLATE; VPC Endpoint CONNECT. Separa contenido de la lección original de ampliaciones de seguridad, routing y cuotas.
