@@ -165,3 +165,6 @@ That relationship is what turns AWS terminology into architecture.
 
 ## NAT — capítulo ciudad LEGO
 - [La salida compartida de la ciudad](CHAPTER-SEED-NAT-The-Shared-Exit-of-the-City.md): partida de oficinas EC2 privadas hacia APIs Internet, NAT como intermediario con dirección pública, regreso por estado de flujo y redundancia por AZ. Diferenciar entrada de clientes por ALB de salida de servidores por NAT.
+
+## Prefix Lists — directorio compartido de la ciudad
+- [Chapter seed: Shared Address Directory](CHAPTER-SEED-Prefix-Lists-Shared-Address-Directory.md): analogía del directorio común de barrios IP; un mismo conjunto CIDR alimenta porteros (Security Groups) y señales viales (Route Tables), sin convertirse en el mecanismo de autorización o enrutamiento. Incluye lección original y ampliaciones diferenciadas, más rondas 10/10.
