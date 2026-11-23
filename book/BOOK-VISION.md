@@ -168,3 +168,6 @@ That relationship is what turns AWS terminology into architecture.
 
 ## Prefix Lists — directorio compartido de la ciudad
 - [Chapter seed: Shared Address Directory](CHAPTER-SEED-Prefix-Lists-Shared-Address-Directory.md): analogía del directorio común de barrios IP; un mismo conjunto CIDR alimenta porteros (Security Groups) y señales viales (Route Tables), sin convertirse en el mecanismo de autorización o enrutamiento. Incluye lección original y ampliaciones diferenciadas, más rondas 10/10.
+
+## S3 Gateway Endpoint — el mapa y la carretera especial
+- [Capítulo: La carretera especial hacia S3](CHAPTER-SEED-VPC-Gateway-Endpoint-Special-Road-to-S3.md). Después de Subnets, NAT y Prefix Lists, explicar por qué Destination (WHERE = S3 IPs / pl-id) no equivale a Target (VIA = Gateway Endpoint vpce-id). Narrar laboratorio de Route Table association y Deny/Allow del endpoint.
