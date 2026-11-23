@@ -204,3 +204,9 @@ The objective is not merely to remember what each AWS service does. It is to be 
 - [Certificación: Rondas 1 y 2, 10/10 ambas](01_NOTES/Prefix%20Lists%20-%20Exam%20Rounds%201%20and%202.md)
 - [Book seed: el directorio compartido de direcciones](book/CHAPTER-SEED-Prefix-Lists-Shared-Address-Directory.md)
 **Relaciones:** Prefix List GROUP CIDR; Security Group ALLOW; Route Table ROUTE; NAT TRANSLATE; VPC Endpoint CONNECT. Separa contenido de la lección original de ampliaciones de seguridad, routing y cuotas.
+
+## S3 Gateway VPC Endpoint — AWS-ONION-LEGO (2026-11-22)
+- [Service DNA: IDENTIFY → ROUTE → CONNECT](02_SERVICES/VPC%20Gateway%20Endpoint%20-%20Identify%20Route%20Connect%20LEGO.md)
+- [Exam / Troubleshooting: Destination vs Target](01_NOTES/VPC%20Gateway%20Endpoint%20-%20Exam%20and%20Troubleshooting.md)
+- [Book seed: La carretera especial hacia S3](book/CHAPTER-SEED-VPC-Gateway-Endpoint-Special-Road-to-S3.md)
+**Clave:** Destination = Prefix List `pl-` de S3 (WHERE); Target = Gateway VPC Endpoint `vpce-` (VIA). S3 accesible por ruta específica sin NAT/IGW. Conectar con Prefix Lists, Subnets y NAT.
