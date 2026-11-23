@@ -72,3 +72,7 @@ Para más detalle, ver [[AWS-Onion - Verbo Rector y Service DNA]].
 ## AWS VPC Prefix Lists — Group / Reference / Reuse
 - [[Prefix Lists - Group Reference Reuse LEGO]] — necesidad de simplificar CIDR, AWS-managed vs customer-managed, Source Security Groups, Destination Route Tables, IPv4/IPv6, CloudFront/S3/DynamoDB, límites, quotas y decisión.
 - [[Prefix Lists - Exam Rounds 1 and 2]] — dos evaluaciones 10/10 y problemas arquitectónicos abiertos futuros.
+
+## Gateway VPC Endpoint for S3
+- [[VPC Gateway Endpoint - Identify Route Connect LEGO]] — CREATE VPC Endpoint HOL, 2 private route tables, S3 managed prefix list, destination `pl-` vs target `vpce-`, políticas de acceso y EC2→S3 end-to-end.
+- [[VPC Gateway Endpoint - Exam and Troubleshooting]] — comprobar elección de ruta, endpoint policy Deny/Allow y alternativas NAT/Interface Endpoint.
